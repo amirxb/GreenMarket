@@ -1,0 +1,75 @@
+// .your-account h1 {
+//   font-size: 35px;
+//   color: black;
+//   margin: 40px 0 20px;
+//   font-weight: 700;
+// }
+
+.login {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+
+.login-box {
+margin-top: 10px;
+background: white;
+padding:30px;
+width: 300px;
+border-radius: 10px;
+border: 2px solid rgb(172, 173, 173);
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 25px ;
+  text-align: center;
+}
+
+.form-actions {
+margin-bottom: 10px;
+background-color: #90A955;
+text-align: center;
+color: white;
+text-decoration: none;
+}
+
+.forgot-pw{
+  margin-top: 10px;
+  color: black;
+}
+
+.sign-up-button{
+  background-color:#90A955;
+  width: 3cm;
+  padding: 5px 10px;
+  text-decoration: none;
+  color:black;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+
+
+.form-sign-up{
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+
+.sign-up-box{
+margin-top: 10px;
+background: white;
+padding:30px;
+width: 300px;
+border-radius: 10px;
+border: 2px solid rgb(172, 173, 173);
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+body {
+  background-color: #cfe1b9; // or any color you want
+}
