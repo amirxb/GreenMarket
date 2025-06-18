@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  get '/my-account', to: 'accounts#show', as: :my_account
+  get '/my-account/edit', to: 'accounts#edit', as: :edit_my_account
+  put '/my-account', to: 'accounts#update'
+  patch '/my-account', to: 'accounts#update'
+
+
   resources :farmers do
     resources :products, only: [:index]
   end

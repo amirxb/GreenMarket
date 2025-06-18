@@ -9,6 +9,7 @@
 display: flex;
 justify-content: center;
 align-items: flex-start;
+height: 100vh;
 }
 
 .login-box {
@@ -71,5 +72,32 @@ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 
 
 body {
-  background-color: #cfe1b9; // or any color you want
+  background-color: #cfe1b9;
+}
+
+// .password {
+// display: flex;
+// justify-content: center;
+// align-items: flex-start;
+// height: 100vh;
+// }
+
+.forgot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh; // full height of the screen
+}
+
+.forgot-box {
+// display: flex;
+// justify-content: center;
+// align-items: flex-start;
+margin-top: 10px;
+background: white;
+padding:30px;
+width: 300px;
+border-radius: 10px;
+border: 2px solid rgb(172, 173, 173);
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }

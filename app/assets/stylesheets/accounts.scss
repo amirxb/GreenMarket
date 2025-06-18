@@ -1,0 +1,42 @@
+.account-box {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+  h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .account-form {
+    color: rgb(0, 8, 2);
+  }
+
+  .my-account-box {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .save-acc{
+    background-color:#cfe1b9;
+    color: white;
+  width: 2cm;
+  padding: 2px ;
+  text-decoration: none;
+  color:black;
+  border-radius: 2px;
+  display: inline-block;
+  }
