@@ -8,11 +8,13 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts "Cleaning database..."
-#Product.destroy_all
+Product.destroy_all
 Farmer.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('farmers')
+
 
 puts "Creating farmers..."
-Farmer.create! = [
+Farmer.create!([
   {
     name: "Ravi",
     location: "Belle Vue",
@@ -31,6 +33,6 @@ Farmer.create! = [
     description: "Based in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.",
     contact_info: "5726 3238"
   }
-]
+])
 
-Puts "Farmers seeded."
+puts "Farmers seeded."
