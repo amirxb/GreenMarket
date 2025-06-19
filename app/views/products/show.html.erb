@@ -9,9 +9,9 @@
 </div>
 
 <div class="product-actions">
-  <%= form_with url: cart_items_path, method: :post, local: true do |form| %>
-    <%= form.hidden_field :product_id, value: @product.id %>
-    <%= form.submit "Add to Cart" %>
+  <%= simple_form_for :cart_item, url: cart_items_path, method: :post do |f| %>
+    <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
+    <%= f.button :submit, "Add to Cart" %>
   <% end %>
 </div>
 
@@ -19,4 +19,3 @@
   <%= link_to "Back to #{@product.farmer.name}", farmer_path(@product.farmer) %>
   <%= link_to "All Farmers", farmers_path %>
 </div>
-

@@ -2,8 +2,9 @@ class CartItemsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @product = Product.find(params[:product_id])
-    @cart = current_user_cart
+    @product = Product.find(params[:cart_item][:product_id])
+    @cart = current_user.carts.find_or_create_by(status: 'active')
+
     @cart_item = @cart.cart_items.find_by(product: @product)
 
     if @cart_item
@@ -13,11 +14,14 @@ class CartItemsController < ApplicationController
     end
 
     if @cart_item.save
-      redirect_to cart_path(@cart), notice: 'Item added to cart!'
+      flash[:notice] = "Item added to cart."
+      redirect_to cart_path
     else
-      redirect_to @product, alert: 'Unable to add item to cart.'
+      flash[:alert] = "Failed to add item."
+      redirect_to product_path(@product)
     end
   end
+
 
   def update
     @cart_item = CartItem.find(params[:id])
