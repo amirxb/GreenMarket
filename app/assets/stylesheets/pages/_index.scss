@@ -3,7 +3,6 @@
 
 .farmers-page {
   background-color: #c8d6a3;
-  min-height: 100vh;
   padding: 40px;
 }
 
@@ -62,6 +61,16 @@
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.farmer-card-link {
+  text-decoration: none;
+}
+
+.farmer-card:hover {
+  background-color: #ededed;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .farmer-card {

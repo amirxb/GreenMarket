@@ -10,8 +10,7 @@ class User < ApplicationRecord
   has_many :notifications, dependent: :destroy
   has_one :cart, dependent: :destroy
 
-
   # validates :name, presence: true, uniqueness: true
-  #validates :email, presence: true, uniqueness: true
-  #validates :password, presence: true
+  # validates :email, presence: true, uniqueness: true
+  # validates :password, presence: true
 end

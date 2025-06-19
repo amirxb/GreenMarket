@@ -2,6 +2,6 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @cart = current_user.cart || current_user.create_cart
+    @cart = current_user.carts.find_by(status: 'active') || current_user.carts.create(status: 'active')
   end
 end

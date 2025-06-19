@@ -1,2 +1,42 @@
 <h1>Your Cart</h1>
-<p>You have nothing in your cart.</p>
+
+<% if @cart.cart_items.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price (Rs)</th>
+        <th>Total (Rs)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cart.cart_items.each do |item| %>
+        <tr>
+          <td><%= item.product.name %></td>
+          <td>
+            <%= form_with model: item, url: cart_item_path(item), method: :patch, local: true do |f| %>
+              <%= f.select :quantity, options_for_select(1..10, item.quantity), {}, onchange: 'this.form.submit();' %>
+            <% end %>
+          </td>
+          <td><%= item.product.price %></td>
+          <td><%= item.product.price * item.quantity %></td>
+          <td>
+          <%= form_with model: item, url: cart_item_path(item), method: :delete, local: true do |f| %>
+            <%= f.submit "Remove", class: "btn btn-danger btn-sm" %>
+          <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <p>
+    <strong>Total Price: Rs <%= @cart.cart_items.sum { |item| item.product.price * item.quantity } %></strong>
+  </p>
+
+  <%= link_to "Checkout", new_order_path, class: "btn btn-primary" %>
+
+<% else %>
+  <p>You have nothing in your cart.</p>
+<% end %>

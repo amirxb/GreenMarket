@@ -44,18 +44,21 @@ Product.create!([
     name: "Sweet Valley Banana",
     description: "Fresh, sweet bananas grown in the fertile valleys of Mauritius. Perfect for snacks, smoothies, or baking.",
     price: "12.00",
+    stock: 20,
     farmer_id: 1
   },
   {
     name: "Cabbage",
     description: "Crisp, fresh cabbage perfect for salads, stir-fries, and traditional Mauritian dishes.",
     price: "32.00",
+    stock: 20,
     farmer_id: 1
   },
   {
     name: "Strawberry",
     description: "Juicy, locally grown strawberries. Great for desserts, jams, or eating fresh.",
     price: "25.00",
+    stock: 20,
     farmer_id: 1
   },
 
@@ -63,6 +66,7 @@ Product.create!([
     name: "Carrot",
     description: "Fresh, crunchy carrots rich in vitamins. Perfect for cooking, juicing, or snacking.",
     price: "17.00",
+    stock: 20,
     farmer_id: 1
   }
 ])
