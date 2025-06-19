@@ -21,11 +21,12 @@ Rails.application.routes.draw do
   put '/my-account', to: 'accounts#update'
   patch '/my-account', to: 'accounts#update'
 
-
+  
   resources :farmers do
     resources :products, only: [:index]
 
     resource :cart, only: [:show]
-
   end
+
+  resources :products, only:[:show]
 end

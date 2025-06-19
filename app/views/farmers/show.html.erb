@@ -8,7 +8,7 @@
     <div class="product-card">
       <h3><%= product.name %></h3>
       <p>Price: Rs <%= product.price %></p>
-      <button>Add to Cart</button>
+      <%= link_to "View Details", product_path(product) %>
     </div>
   <% end %>
 </div>

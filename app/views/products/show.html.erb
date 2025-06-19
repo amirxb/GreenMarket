@@ -1,0 +1,24 @@
+<h1><%= @product.name %></h1>
+
+<div class="product-details">
+  <p><strong>Price:</strong> Rs <%= @product.price %></p>
+  <p><strong>Farmer:</strong> <%= @product.farmer.name %></p>
+  <p><strong>Location:</strong> <%= @product.farmer.location %></p>
+
+  <% if @product.description.present? %>
+    <p><strong>Description:</strong> <%= @product.description %></p>
+  <% end %>
+
+  <% if @product.stock.present? %>
+    <p><strong>Stock:</strong> <%= @product.stock %> available</p>
+  <% end %>
+</div>
+
+<div class="product-actions">
+  <button>Add to Cart</button>
+</div>
+
+<div class="navigation">
+  <%= link_to "Back to #{@product.farmer.name}", farmer_path(@product.farmer) %>
+  <%= link_to "All Farmers", farmers_path %>
+</div>
