@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_06_18_103215) do
+ActiveRecord::Schema[7.1].define(version: 2025_06_19_075159) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,6 +49,15 @@ ActiveRecord::Schema[7.1].define(version: 2025_06_18_103215) do
     t.string "contact_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id", null: false
+    t.boolean "read"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -96,6 +105,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_06_18_103215) do
   add_foreign_key "cart_items", "products"
   add_foreign_key "carts", "users"
   add_foreign_key "confirmations", "orders"
+  add_foreign_key "notifications", "users"
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "farmers"
