@@ -10,6 +10,7 @@
 puts "Cleaning database..."
 Product.destroy_all
 Farmer.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('products')
 ActiveRecord::Base.connection.reset_pk_sequence!('farmers')
 
 
@@ -34,5 +35,35 @@ Farmer.create!([
     contact_info: "5726 3238"
   }
 ])
+puts "#{Farmer.count} Farmers created."
 
-puts "Farmers seeded."
+
+puts "Creating products..."
+Product.create!([
+  {
+    name: "Sweet Valley Banana",
+    description: "Fresh, sweet bananas grown in the fertile valleys of Mauritius. Perfect for snacks, smoothies, or baking.",
+    price: "12.00",
+    farmer_id: 1
+  },
+  {
+    name: "Cabbage",
+    description: "Crisp, fresh cabbage perfect for salads, stir-fries, and traditional Mauritian dishes.",
+    price: "32.00",
+    farmer_id: 1
+  },
+  {
+    name: "Strawberry",
+    description: "Juicy, locally grown strawberries. Great for desserts, jams, or eating fresh.",
+    price: "25.00",
+    farmer_id: 1
+  },
+
+  {
+    name: "Carrot",
+    description: "Fresh, crunchy carrots rich in vitamins. Perfect for cooking, juicing, or snacking.",
+    price: "17.00",
+    farmer_id: 1
+  }
+])
+puts "#{Product.count} Products created."
