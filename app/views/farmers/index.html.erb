@@ -1,0 +1,32 @@
+<div class="farmers-page">
+  <div class="page-header">
+    <h1 class="page-title">Our Farmers</h1>
+    <p class="page-subtitle">"Location Searched"</p>
+  </div>
+
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" class="search-input" placeholder="Search farmers..." />
+      <button class="search-button">🔍</button>
+    </div>
+  </div>
+
+  <div class="farmers-layout">
+    <% @farmers.each do |farmer| %>
+      <div class="farmer-card">
+        <div class="farmer-info">
+          <h3 class="farmer-name"><%= farmer.name %></h3>
+          <p class="farmer-contact">
+            <span>Contact:</span> <%= farmer.contact_info %>
+          </p>
+          <p class="farmer-address">
+            <span>Address:</span> <%= farmer.location %>
+          </p>
+          <p class="farmer-description">
+            <span>Description:</span> <%= farmer.description %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
