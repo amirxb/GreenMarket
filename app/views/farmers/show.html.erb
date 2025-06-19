@@ -1,0 +1,16 @@
+<h1><%= @farmer.name %></h1>
+<p><%= @farmer.location %></p>
+
+<h2>Products</h2>
+
+<div class="products">
+  <% @farmer.products.each do |product| %>
+    <div class="product-card">
+      <h3><%= product.name %></h3>
+      <p>Price: Rs <%= product.price %></p>
+      <%= link_to "View Details", product_path(product) %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Back to Farmers", farmers_path %>

@@ -24,8 +24,12 @@ Rails.application.routes.draw do
 
   resources :farmers do
     resources :products, only: [:index]
-
     resource :cart, only: [:show]
-
   end
+
+  resources :products, only:[:show]
+
+  resources :cart_items, only: [:create, :update, :destroy]
+
+  resources :orders, only: [:new, :create, :show]
 end

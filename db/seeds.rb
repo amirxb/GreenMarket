@@ -8,11 +8,14 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts "Cleaning database..."
-#Product.destroy_all
+Product.destroy_all
 Farmer.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('products')
+ActiveRecord::Base.connection.reset_pk_sequence!('farmers')
+
 
 puts "Creating farmers..."
-Farmer.create! = [
+Farmer.create!([
   {
     name: "Ravi",
     location: "Belle Vue",
@@ -31,6 +34,40 @@ Farmer.create! = [
     description: "Based in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.",
     contact_info: "5726 3238"
   }
-]
+])
+puts "#{Farmer.count} Farmers created."
 
-Puts "Farmers seeded."
+
+puts "Creating products..."
+Product.create!([
+  {
+    name: "Sweet Valley Banana",
+    description: "Fresh, sweet bananas grown in the fertile valleys of Mauritius. Perfect for snacks, smoothies, or baking.",
+    price: "12.00",
+    stock: 20,
+    farmer_id: 1
+  },
+  {
+    name: "Cabbage",
+    description: "Crisp, fresh cabbage perfect for salads, stir-fries, and traditional Mauritian dishes.",
+    price: "32.00",
+    stock: 20,
+    farmer_id: 1
+  },
+  {
+    name: "Strawberry",
+    description: "Juicy, locally grown strawberries. Great for desserts, jams, or eating fresh.",
+    price: "25.00",
+    stock: 20,
+    farmer_id: 1
+  },
+
+  {
+    name: "Carrot",
+    description: "Fresh, crunchy carrots rich in vitamins. Perfect for cooking, juicing, or snacking.",
+    price: "17.00",
+    stock: 20,
+    farmer_id: 1
+  }
+])
+puts "#{Product.count} Products created."

@@ -1,0 +1,21 @@
+<h1><%= @product.name %></h1>
+<h2><strong>Farmer:</strong> <%= @product.farmer.name %></h2>
+
+
+<div class="product-details">
+  <p><strong>Price:</strong> Rs <%= @product.price %></p>
+  <p><strong>Stock:</strong> <%= @product.stock %> available</p>
+  <p><strong>Description:</strong> <%= @product.description %></p>
+</div>
+
+<div class="product-actions">
+  <%= simple_form_for :cart_item, url: cart_items_path, method: :post do |f| %>
+    <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
+    <%= f.button :submit, "Add to Cart" %>
+  <% end %>
+</div>
+
+<div class="navigation">
+  <%= link_to "Back to #{@product.farmer.name}", farmer_path(@product.farmer) %>
+  <%= link_to "All Farmers", farmers_path %>
+</div>
