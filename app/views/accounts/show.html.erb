@@ -1,0 +1,14 @@
+<div class="account-box">
+  <h1>My Account</h1>
+
+  <div class="account-form">
+    <p><strong>Name:</strong> <%= @user.name %></p>
+    <p><strong>Surname:</strong> <%= @user.surname %></p>
+    <p><strong>Date of Birth:</strong> <%= @user.dob %></p>
+    <p><strong>Role:</strong> <%= @user.role %></p>
+    <p><strong>Username:</strong> <%= @user.username %></p>
+    <p><strong>Email:</strong> <%= @user.email %></p>
+
+    <%= link_to "Edit Account", edit_my_account_path, class: "btn btn-primary" %>
+  </div>
+</div>
