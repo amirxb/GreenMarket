@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get '/notifications', to: 'notifications#index', as: :notifications
   get '/cart', to: 'carts#show', as: :cart
+  get '/checkout', to: 'orders#new', as: :new_order
+  post '/checkout', to: 'orders#create', as: :orders
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

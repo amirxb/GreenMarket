@@ -1,0 +1,11 @@
+<h1>Payment</h1>
+
+<%= simple_form_for :payment, url: orders_path do |f| %>
+  <div class="form-group">
+    <%= f.input :card_number, label: "Card Number", input_html: { placeholder: "1234 5678 9012 3456" } %>
+    <%= f.input :expiration, label: "Expiration Date", input_html: { placeholder: "MM/YY" } %>
+    <%= f.input :cvv, label: "CVV", input_html: { placeholder: "123" } %>
+  </div>
+
+  <%= f.button :submit, "Pay Now", class: "btn btn-success" %>
+<% end %>
