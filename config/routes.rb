@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   # get 'notifications/test_create', to: 'notifications#test_create'
 
-  get '/notifications', to: 'notifications#index', as: :notifications
-  get '/cart', to: 'carts#show', as: :cart
+  resources :notifications, only: [:index] do
+    member do
+      get :mark_as_read
+    end
+  end
+
   get '/checkout', to: 'orders#new', as: :new_order
   post '/checkout', to: 'orders#create', as: :orders
 
@@ -26,14 +30,10 @@ Rails.application.routes.draw do
   resource :my_account, controller: 'accounts'
 
   resources :farmers do
-    resources :products, only: [:index]
-    resource :cart, only: [:show]
+    resources :products, only: [:index,:show]
   end
 
-  # resource :my_account, only: [:show, :edit, :update, :destroy, :new, :create]
-
-
-  resources :products, only:[:show]
+  resource :cart, only: [:show]
 
   resources :cart_items, only: [:create, :update, :destroy]
 

@@ -8,7 +8,7 @@
     <div class="product-card">
       <h3><%= product.name %></h3>
       <p>Price: Rs <%= product.price %></p>
-      <%= link_to "View Details", product_path(product) %>
+      <%= link_to "View Details", farmer_product_path(@farmer, product) %>
     </div>
   <% end %>
 </div>

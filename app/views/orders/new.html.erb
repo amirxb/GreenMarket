@@ -1,4 +1,4 @@
-<h1>Payment</h1>
+<h1>Payment Details</h1>
 
 <%= simple_form_for :payment, url: orders_path do |f| %>
   <div class="form-group">
@@ -9,3 +9,29 @@
 
   <%= f.button :submit, "Pay Now", class: "btn btn-success" %>
 <% end %>
+
+<h3>Order Summary</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Unit Price</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.cart_items.each do |item| %>
+      <tr>
+        <td><%= item.product.name %></td>
+        <td><%= item.quantity %></td>
+        <td>Rs <%= '%.2f' %  item.product.price %></td>
+        <td>Rs <%= item.product.price * item.quantity %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><strong>Total Price: Rs <%= '%.2f' %  @total_price %></strong></p>
+
+<hr>

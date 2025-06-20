@@ -1,0 +1,11 @@
+.notification {
+  cursor: pointer;
+  font-weight: 700;  /* bold for unread */
+  opacity: 1;
+
+  &.read {
+    font-weight: normal;
+    opacity: 0.6;
+    cursor: default;
+  }
+}
