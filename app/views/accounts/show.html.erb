@@ -1,28 +1,25 @@
-<div class="account-box">
+<div class="profile-page">
+  <div class="profile-card">
   <h1>My Profile</h1>
-
-  <div class="account-form">
     <% if @user.profile_picture.attached? %>
-    <%= image_tag url_for(@user.profile_picture), style: "width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" %>
-<% else %>
-  <p>No profile picture uploaded.</p>
-<% end %>
+      <%= image_tag url_for(@user.profile_picture), class: "profile-avatar" %>
+    <% else %>
+      <div class="profile-avatar placeholder">No Picture</div>
+    <% end %>
 
-    <p><strong>Username:</strong> <%= @user.username %></p>
-    <p><strong>Name:</strong> <%= @user.name %></p>
-    <p><strong>Surname:</strong> <%= @user.surname %></p>
-    <p><strong>Date of Birth:</strong> <%= @user.dob %></p>
-    <p><strong>Role:</strong> <%= @user.role %></p>
-    <%# <p><strong>Email:</strong> <%= @user.email %></p>
+    <h2 class="profile-username">@<%= @user.username %></h2>
 
-  <div class="account-actions">
-  <%= link_to "Edit Account", edit_my_account_path, class: "edit-account btn" %>
-  <%= button_to "Delete Account", my_account_path, method: :delete,
-        data: { confirm: "Are you sure you want to permanently delete your account?" },
-        class: "btn btn-danger" %>
-</div>
+    <div class="profile-info">
+      <p><strong>Name:</strong> <%= @user.name %> <%= @user.surname %></p>
+      <p><strong>Date of Birth:</strong> <%= @user.dob %></p>
+      <p><strong>Role:</strong> <%= @user.role %></p>
+    </div>
 
-
-
+    <div class="profile-actions">
+      <%= link_to "Edit Account", edit_my_account_path, class: "btn edit-btn" %>
+      <%= button_to "Delete Account", my_account_path, method: :delete,
+          data: { confirm: "Are you sure you want to permanently delete your account?" },
+          class: "btn delete-btn" %>
+    </div>
   </div>
 </div>
