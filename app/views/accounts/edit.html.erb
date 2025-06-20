@@ -5,8 +5,8 @@
   <%= f.error_notification %>
 
       <%= f.input :profile_picture, as: :file, label: "Profile Picture" %>
+  <% if @user.profile_picture.attached? %>
   <%= image_tag url_for(@user.profile_picture), style: "width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" %>
-      <% if @user.profile_picture.attached? %>
 <% else %>
   <p>No profile picture uploaded</p>
 <% end %>
