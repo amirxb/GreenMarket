@@ -3,7 +3,7 @@ class CartsController < ApplicationController
 
   def show
     @cart = current_user.carts.find_by(status: 'active') || current_user.carts.create(status: 'active')
-    @farmer = Farmer.find(params[:id])
+    # @farmer = Farmer.find(params[:farmer_id])
 
   end
 end

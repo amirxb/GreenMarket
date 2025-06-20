@@ -68,6 +68,13 @@ Product.create!([
     price: "17.00",
     stock: 10,
     farmer_id: 1
+  },
+  {
+    name: "Mango",
+    description: "Fresh, crunchy carrots rich in vitamins. Perfect for cooking, juicing, or snacking.",
+    price: "12.50",
+    stock: 10,
+    farmer_id: 1
   }
 ])
 puts "#{Product.count} Products created."
