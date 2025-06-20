@@ -1,14 +1,25 @@
-<div class="account-box">
-  <h1>My Account</h1>
+<div class="profile-page">
+  <div class="profile-card">
+  <h1>My Profile</h1>
+    <% if @user.profile_picture.attached? %>
+      <%= image_tag url_for(@user.profile_picture), class: "profile-avatar" %>
+    <% else %>
+      <div class="profile-avatar placeholder">No Picture</div>
+    <% end %>
 
-  <div class="account-form">
-    <p><strong>Name:</strong> <%= @user.name %></p>
-    <p><strong>Surname:</strong> <%= @user.surname %></p>
-    <p><strong>Date of Birth:</strong> <%= @user.dob %></p>
-    <p><strong>Role:</strong> <%= @user.role %></p>
-    <p><strong>Username:</strong> <%= @user.username %></p>
-    <p><strong>Email:</strong> <%= @user.email %></p>
+    <h2 class="profile-username">@<%= @user.username %></h2>
 
-    <%= link_to "Edit Account", edit_my_account_path, class: "btn btn-primary" %>
+    <div class="profile-info">
+      <p><strong>Name:</strong> <%= @user.name %> <%= @user.surname %></p>
+      <p><strong>Date of Birth:</strong> <%= @user.dob %></p>
+      <p><strong>Role:</strong> <%= @user.role %></p>
+    </div>
+
+    <div class="profile-actions">
+      <%= link_to "Edit Account", edit_my_account_path, class: "btn edit-btn" %>
+      <%= button_to "Delete Account", my_account_path, method: :delete,
+          data: { confirm: "Are you sure you want to permanently delete your account?" },
+          class: "btn delete-btn" %>
+    </div>
   </div>
 </div>

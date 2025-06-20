@@ -1,0 +1,37 @@
+<div class="my-account-box">
+  <h1>Create Account</h1>
+
+  <% if @user.errors.any? %>
+    <div class="error-messages" style="color: red; margin-bottom: 1em;">
+      <h2><%= pluralize(@user.errors.count, "error") %> prevented this user from being saved:</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= simple_form_for(@user, url: my_account_path, html: { multipart: true }) do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :name %>
+    <%= f.input :surname %>
+    <%= f.input :dob, as: :date, start_year: 1900, end_year: Date.today.year %>
+    <%= f.input :role, collection: ['User', 'Farmer'], prompt: 'Select your role' %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+
+      <%= f.input :profile_picture, as: :file, label: "Upload Profile Picture" %>
+      <% if @user.profile_picture.attached? %>
+  <%= image_tag url_for(@user.profile_picture), style: "width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" %>
+<% else %>
+  <p>No profile picture uploaded</p>
+<% end %>
+
+    <div class="save-acc">
+      <%= f.button :submit, "Create Account" %>
+    </div>
+  <% end %>
+</div>

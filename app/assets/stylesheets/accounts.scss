@@ -33,10 +33,138 @@
   .save-acc{
     background-color:#cfe1b9;
     color: rgb(0, 0, 0);
-  width: 2cm;
-  padding: 2px ;
+  // width: 4cm;
+  padding: 1px ;
   text-decoration: none;
   color:black;
   border-radius: 2px;
   display: inline-block;
+
+  .save-acc button:hover{
+    color:#cfe1b9;
   }
+
+  }
+.account-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  background-color: #80a355;
+
+  &:hover {
+    background-color:#80a355;
+  }
+}
+
+.btn-danger {
+  background-color: #dc3545;
+
+  &:hover {
+    background-color: #bb2d3b;
+  }
+}
+
+
+/////myprofile/////
+.profile-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #cfe1b9;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 3px solid #90A955;
+
+  &.placeholder {
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 120px;
+  }
+}
+
+.profile-username {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.profile-info {
+  text-align: left;
+  margin-bottom: 30px;
+
+  p {
+    font-size: 15px;
+    margin: 10px 0;
+    strong {
+      color: #555;
+    }
+  }
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+    width: 100%; 
+    margin: 0 auto;
+  }
+
+  .edit-btn {
+    background-color: #90A955;
+    color: white;
+
+    &:hover {
+      background-color: #7d8f4a;
+    }
+  }
+
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+
+    &:hover {
+      background-color: #bb2d3b;
+    }
+  }
+}

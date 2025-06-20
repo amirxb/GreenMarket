@@ -23,19 +23,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get '/my-account', to: 'accounts#show', as: :my_account
-  get '/my-account/edit', to: 'accounts#edit', as: :edit_my_account
-  put '/my-account', to: 'accounts#update'
-  patch '/my-account', to: 'accounts#update'
-
+  # get '/my-account', to: 'accounts#show', as: :my_account
+  # get '/my-account/edit', to: 'accounts#edit', as: :edit_my_account
+  # put '/my-account', to: 'accounts#update'
+  # patch '/my-account', to: 'accounts#update'
+  resource :my_account, controller: 'accounts'
 
   resources :farmers do
     resources :products, only: [:index,:show]
   end
 
   resource :cart, only: [:show]
-
-  # resources :products, only:[:show]
 
   resources :cart_items, only: [:create, :update, :destroy]
 
