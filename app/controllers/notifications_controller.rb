@@ -13,4 +13,10 @@ class NotificationsController < ApplicationController
     )
     redirect_to notifications_path, notice: "Test notification created!"
   end
+
+  def mark_as_read
+    @notification = current_user.notifications.find(params[:id])
+    @notification.update(read: true)
+    redirect_to notifications_path
+  end
 end

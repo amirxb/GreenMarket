@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   # get 'notifications/test_create', to: 'notifications#test_create'
 
-  get '/notifications', to: 'notifications#index', as: :notifications
+  resources :notifications, only: [:index] do
+    member do
+      get :mark_as_read
+    end
+  end
 
   get '/checkout', to: 'orders#new', as: :new_order
   post '/checkout', to: 'orders#create', as: :orders
@@ -28,7 +32,7 @@ Rails.application.routes.draw do
   resources :farmers do
     resources :products, only: [:index,:show]
   end
-  
+
   resource :cart, only: [:show]
 
   # resources :products, only:[:show]
