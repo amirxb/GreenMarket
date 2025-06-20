@@ -33,10 +33,40 @@
   .save-acc{
     background-color:#cfe1b9;
     color: rgb(0, 0, 0);
-  width: 2cm;
-  padding: 2px ;
+  // width: 4cm;
+  padding: 1px ;
   text-decoration: none;
   color:black;
   border-radius: 2px;
   display: inline-block;
+
+  .save-acc button:hover{
+    color:#cfe1b9;
   }
+
+  }
+.account-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  background-color: #80a355;
+
+  &:hover {
+    background-color:#80a355;
+  }
+}
+
+.btn-danger {
+  background-color: #dc3545;
+
+  &:hover {
+    background-color: #bb2d3b;
+  }
+}
