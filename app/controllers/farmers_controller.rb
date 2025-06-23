@@ -1,7 +1,18 @@
 class FarmersController < ApplicationController
   def index
-    @farmers = Farmer.all
-    # @farmer = Farmer.find(params[:farmer_id])
+    if params[:search].present?
+      @farmers = Farmer.where("location ILIKE ?", "%#{params[:search]}%")
+    else
+      @farmers = Farmer.all
+    end
+
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @farmers.geocoded.map do |farmer|
+      {
+        lat: farmer.latitude,
+        lng: farmer.longitude
+      }
+    end
   end
 
   def show
