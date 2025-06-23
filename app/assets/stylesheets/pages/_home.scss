@@ -1,26 +1,99 @@
 // Specific CSS for your home-page
-body, html {
-    height: 100%;
-}
-
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/draltripq/image/upload/v1750156486/nrd-D6Tu_L3chLE-unsplash_pdvf6t.jpg");
-
-  height: 50%;
-
+  min-height: 500px;
+  margin-top: 3rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  text-align: left;
+  max-width: 700px;
   color: white;
-  width: 100%;
-  max-width: 600px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  margin-right: 13.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+button {
+  background-color: #3A5A40;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #582f0e;
+  }
+
+  a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+.features {
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
 }
