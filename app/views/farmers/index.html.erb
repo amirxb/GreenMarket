@@ -1,14 +1,21 @@
-<div class="farmers-page">
   <div class="page-header">
     <h1 class="page-title">Our Farmers</h1>
-    <p class="page-subtitle">"Location Searched"</p>
+    <p class="page-subtitle">
+      <% if params[:search].present? %>
+        Location: "<%= params[:search] %>"
+      <% else %>
+        "All Locations"
+      <% end %>
+    </p>
   </div>
 
   <div class="search-container">
-    <div class="search-box">
-      <input type="text" class="search-input" placeholder="Search farmers..." />
-      <button class="search-button">🔍</button>
-    </div>
+    <%= form_with url: farmers_path, method: :get, local: true, class: "search-form" do |form| %>
+      <div class="search-box">
+        <%= form.text_field :search, placeholder: "Search by location...", value: params[:search], class: "search-input" %>
+        <%= form.submit "🔍", class: "search-button" %>
+      </div>
+    <% end %>
   </div>
 
   <div class="farmers-layout">
@@ -31,4 +38,10 @@
       <% end %>
     <% end %>
   </div>
+</div>
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

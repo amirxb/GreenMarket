@@ -18,19 +18,19 @@ puts "Creating farmers..."
 Farmer.create!([
   {
     name: "Ravi",
-    location: "Belle Vue",
+    location: "MU, Ave Rosier, Amaury 31401",
     description: "Passionate about sustainable farming, Ravi brings fresh vegetables straight from his fields in Belle Vue every morning.",
     contact_info: "5792 1010"
   },
   {
     name: "Asha",
-    location: "Flacq",
+    location: "Royal Road Plaine Des Roches Riviere Du Rempart MU, 31902",
     description: "Known for her organic herbs and leafy greens, Asha is a trusted grower from Saint Pierre with a love for clean, healthy food.",
     contact_info: "5785 3093"
   },
   {
     name: "Moha",
-    location: "Curepipe",
+    location: "VPP9+62G, Shantineketan MU, Road, Roches Noires 31207",
     description: "Based in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.",
     contact_info: "5726 3238"
   }
