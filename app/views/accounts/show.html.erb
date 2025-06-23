@@ -1,6 +1,6 @@
 <div class="profile-page">
   <div class="profile-card">
-  <h1>My Profile</h1>
+  <%# <h1>My Profile</h1> %>
     <% if @user.profile_picture.attached? %>
       <%= image_tag url_for(@user.profile_picture), class: "profile-avatar" %>
     <% else %>
@@ -10,9 +10,12 @@
     <h2 class="profile-username">@<%= @user.username %></h2>
 
     <div class="profile-info">
-      <p><strong>Name:</strong> <%= @user.name %> <%= @user.surname %></p>
-      <p><strong>Date of Birth:</strong> <%= @user.dob %></p>
-      <p><strong>Role:</strong> <%= @user.role %></p>
+      <strong>Name:</strong><%= @user.name %> <%= @user.surname %></p>
+      <% if @user.bio.present? %><p><strong>Bio:</strong> <%= @user.bio %></p><% end %>
+      <% if @user.location.present? %> <p><strong>Location:</strong> <%= @user.location %></p> <% end %>
+
+      <%# <p><strong>Date of Birth:</strong> <%= @user.dob %>
+      <%# <p><strong>Role:</strong> <%= @user.role %>
     </div>
 
     <div class="profile-actions">

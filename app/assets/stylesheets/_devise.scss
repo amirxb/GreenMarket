@@ -5,6 +5,7 @@
 //   font-weight: 700;
 // }
 
+///login//
 .login {
 display: flex;
 justify-content: center;
@@ -52,11 +53,13 @@ text-decoration: none;
 }
 
 
-
 .form-sign-up{
 display: flex;
 justify-content: center;
 align-items: flex-start;
+min-height: 100vh;
+background-color: #cfe1b9;
+padding: 20px;
 }
 
 .sign-up-box{
@@ -101,3 +104,27 @@ border-radius: 10px;
 border: 2px solid rgb(172, 173, 173);
 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+
+////sign up////
+.form-sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #cfe1b9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sign-up-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 50px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+
