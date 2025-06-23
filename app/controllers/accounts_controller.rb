@@ -16,10 +16,11 @@ class AccountsController < ApplicationController
   def update
     @user = current_user
     if @user.update(account_params)
-      sign_in(@user, bypass: true)  # <-- This keeps the user signed in after password update
+      sign_in(@user, bypass: true)
       redirect_to my_account_path, notice: "Your account has been updated successfully."
     else
-      render :edit
+    # The @user now may have unsaved changes but keep @user as is
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -41,7 +42,7 @@ class AccountsController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @user = current_user
   end
 
   private
@@ -50,7 +51,7 @@ class AccountsController < ApplicationController
     params.require(:user).permit(
       :name, :surname, :dob, :role, :username,
       :password, :password_confirmation,
-      :profile_picture
+      :profile_picture, :bio, :location
     )
   end
 end

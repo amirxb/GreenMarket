@@ -3,19 +3,22 @@
 
 <%= simple_form_for(@user, url: my_account_path, html: { multipart: true }) do |f| %>
   <%= f.error_notification %>
-
-      <%= f.input :profile_picture, as: :file, label: "Profile Picture" %>
-  <% if @user.profile_picture.attached? %>
+<% if @user.persisted? && @user.profile_picture.attached? && @user.profile_picture.blob.persisted? %>
   <%= image_tag url_for(@user.profile_picture), style: "width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" %>
 <% else %>
   <p>No profile picture uploaded</p>
 <% end %>
 
+<%= f.input :profile_picture, as: :file, label: "Upload Profile Picture" %>
+
+
   <%= f.input :name %>
   <%= f.input :surname %>
-  <%= f.input :dob, as: :date, start_year: 1900, end_year: Date.today.year %>
-  <%= f.input :role, collection: ['User', 'Farmer'], prompt: 'Select your role' %>
   <%= f.input :username %>
+  <%= f.input :dob, as: :date, start_year: 1900, end_year: Date.today.year %>
+  <%= f.input :bio, as: :text, input_html: { rows: 4 }, label: "Bio" %>
+  <%= f.input :location, label: "Location" %>
+  <%# <%= f.input :role, collection: ['User', 'Farmer'], prompt: 'Select your role' %>
   <%= f.input :password, required: false %>
   <%= f.input :password_confirmation, required: false %>
 
