@@ -1,8 +1,12 @@
 // Specific CSS for your home-page
+
+.home-page {
+  background-color: white;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/draltripq/image/upload/v1750156486/nrd-D6Tu_L3chLE-unsplash_pdvf6t.jpg");
   min-height: 500px;
-  margin-top: 3rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +42,7 @@
 button {
   background-color: #3A5A40;
   border: none;
-  border-radius: 8px;
+  border-radius: 3rem;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -50,7 +54,7 @@ button {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.5rem;
     font-size: 1.2rem;
     font-weight: bold;
   }
