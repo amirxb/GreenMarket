@@ -1,44 +1,50 @@
-<h1>Your Cart</h1>
+<div class="cart-box">
+  <h1>Your Cart</h1>
 
-<% if @cart.cart_items.any? %>
-  <table>
-    <thead>
-      <tr>
-        <th>Product Name</th>
-        <th>Quantity</th>
-        <th>Price (Rs)</th>
-        <th>Total (Rs)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @cart.cart_items.each do |item| %>
-        <tr>
-          <td><%= item.product.name %></td>
-          <td>
-            <%= simple_form_for item, url: cart_item_path(item), method: :patch, html: { local: true } do |f| %>
-              <%= f.input :quantity, collection: 1..10, selected: item.quantity, input_html: { onchange: 'this.form.submit();' } %>
-            <% end %>
-          </td>
-          <td><%= item.product.price %></td>
-          <td><%= item.product.price * item.quantity %></td>
-          <td>
-          <%= simple_form_for item, url: cart_item_path(item), method: :delete, html: { local: true } do |f| %>
-            <%= f.button :submit, "Remove", class: "btn btn-danger btn-sm" %>
+  <% if @cart.cart_items.any? %>
+    <div class="cart-table-wrapper">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price (Rs)</th>
+            <th>Total (Rs)</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @cart.cart_items.each do |item| %>
+            <tr>
+              <td><%= item.product.name %></td>
+              <td>
+                <%= simple_form_for item, url: cart_item_path(item), method: :patch, html: { local: true, class: 'quantity-form' } do |f| %>
+                  <%= f.input :quantity, collection: 1..100, selected: item.quantity, input_html: { onchange: 'this.form.submit();' }, label: false %>
+                <% end %>
+              </td>
+              <td><%= item.product.price %></td>
+              <td><%= item.product.price * item.quantity %></td>
+              <td>
+                <%= simple_form_for item, url: cart_item_path(item), method: :delete, html: { local: true } do |f| %>
+                  <%= f.button :submit, "Remove", class: "btn-sm" %>
+                <% end %>
+              </td>
+            </tr>
           <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+        </tbody>
+      </table>
+    </div>
 
-  <p>
-    <strong>Total Price: Rs <%= @cart.cart_items.sum { |item| item.product.price * item.quantity } %></strong>
-  </p>
+    <div class="cart-total">
+      <p><strong>Total Price:</strong> Rs <%= @cart.cart_items.sum { |item| item.product.price * item.quantity } %></p>
 
-  <%= link_to "Checkout", new_order_path, class: "btn btn-primary" %>
-  <%= link_to "Back", :back, class: "btn btn-secondary" %>
+      <div class="cart-actions">
+        <%= link_to "Checkout", new_order_path, class: "btn btn-primary" %>
+        <%= link_to "Back", :back, class: "btn btn-secondary" %>
+      </div>
+    </div>
 
-
-<% else %>
-  <p>You have nothing in your cart.</p>
-<% end %>
+  <% else %>
+    <p class="empty-cart-message">You have nothing in your cart.</p>
+  <% end %>
+</div>
