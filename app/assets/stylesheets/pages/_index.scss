@@ -2,128 +2,121 @@
 @import "home";
 
 .farmers-page {
-  background-color: #c8d6a3;
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
 }
 
-.page-header {
-  margin-bottom: 40px;
+.top-row {
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 40px;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: none;
+  min-width: 250px;
 }
 
 .page-title {
-  color:rgb(0, 0, 0);
-  font-size: 22px;
+  color: #000000;
+  font-size: 25px;
   font-weight: bold;
-  margin-bottom: 8px;
-  text-align: left
+  margin: 0;
+  text-align: left;
+  font-family: "Afacad", sans-serif;
 }
 
 .page-subtitle {
-  color: #666;
-  font-size: 15px;
-  font-style: italic;
-}
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.search-box {
-  position: relative;
-  width: 350px;
-  top: -100px
-}
-
-.search-input {
-  width: 100%;
-  padding: 12px 45px 12px 20px;
-  border-radius: 25px;
+  color: #757575;
   font-size: 16px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.farmers-section {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 40px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 
-.search-button {
-  position: absolute;
-  right: 15px;
-  top: 30%;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 0;
-}
 
 .farmers-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .farmer-card-link {
   text-decoration: none;
 }
 
-.farmer-card:hover {
-  background-color: #ededed;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 .farmer-card {
   background: white;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  border: 1px solid #e0e0e0;
+  min-height: 250px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.farmer-info {
-  width: 100%;
+.farmer-card:hover {
+  transform: translateY(-4px);
 }
+
 
 .farmer-name {
-  color:rgb(0, 0, 0);
+  color: #000000;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 12px;
 }
 
 .farmer-contact, .farmer-address {
   color: #666;
   font-size: 14px;
-  margin-bottom: 8px;
+  margin: 5px 0;
 }
 
 .farmer-contact span, .farmer-address span {
   font-weight: 600;
+  color: #000000;
 }
 
 .farmer-description {
-  color: #777;
+  color: #666;
   font-size: 13px;
   line-height: 1.4;
-  margin-top: 8px;
+  margin-top: 10px;
   font-style: italic;
 }
 
-@media (max-width: 768px) {
-  .farmers-page {
-    padding: 20px;
-  }
+.map-section {
+  position: relative;
+  width: 40%;
+  height: 100%;
+}
 
-  .farmers-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .farmer-card {
-    text-align: left;
-  }
-
-  .search-box {
-    width: 100%;
-    max-width: 350px;
-  }
+.map-container {
+  width: 100%;
+  height: 100%;
 }

@@ -1,8 +1,12 @@
 // Specific CSS for your home-page
+
+.home-page {
+  background-color: white;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/draltripq/image/upload/v1750156486/nrd-D6Tu_L3chLE-unsplash_pdvf6t.jpg");
   min-height: 500px;
-  margin-top: 3rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,20 +18,21 @@
 }
 
 .hero-text {
-  max-width: 700px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.hero-text h1 {
-  font-size: 3.6rem;
+.hero-text h2 {
+  font-size: 2.6rem;
   font-weight: bold;
   margin-bottom: 2rem;
   line-height: 1.2;
   margin-right: 13.5rem;
+  max-width: 900px;
 }
 
-p {
+.hero-text p {
+  max-width: 700px;
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
   line-height: 1.6;
@@ -37,7 +42,7 @@ p {
 button {
   background-color: #3A5A40;
   border: none;
-  border-radius: 8px;
+  border-radius: 3rem;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -49,7 +54,7 @@ button {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.5rem;
     font-size: 1.2rem;
     font-weight: bold;
   }
@@ -73,6 +78,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 
   .feature-icon {
     font-size: 2.5rem;
@@ -84,6 +90,18 @@ button {
     justify-content: center;
   }
 
+  .heart-icon {
+    color: #880d1e;
+  }
+
+  .shield-icon {
+    color: #023047;
+  }
+
+  .smile-icon {
+    color: #37b600;
+  }
+
   h3 {
     font-size: 1.7rem;
     margin-bottom: 1rem;
@@ -92,7 +110,7 @@ button {
   }
 
   p {
-    color: #666;
+    color: #757575;
     line-height: 1.6;
     font-size: 1.1rem;
   }
