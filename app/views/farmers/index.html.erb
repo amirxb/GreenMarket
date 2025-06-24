@@ -1,8 +1,9 @@
-  <div class="page-header">
+<div class="farmers-page">
+  <div class="title-section">
     <h1 class="page-title">Our Farmers</h1>
     <p class="page-subtitle">
       <% if params[:search].present? %>
-        Location: "<%= params[:search] %>"
+        Location Searched: "<%= params[:search] %>"
       <% else %>
         "All Locations"
       <% end %>
@@ -11,37 +12,46 @@
 
   <div class="search-container">
     <%= form_with url: farmers_path, method: :get, local: true, class: "search-form" do |form| %>
-      <div class="search-box">
-        <%= form.text_field :search, placeholder: "Search by location...", value: params[:search], class: "search-input" %>
-        <%= form.submit "🔍", class: "search-button" %>
+      <label for="search" class="visually-hidden">Search</label>
+      <div class="animated-search-box">
+        <%= form.text_field :search, id: "search", placeholder: "Search by location...", value: params[:search], class: "animated-search-input", required: false %>
+        <%= form.submit "🔍", class: "animated-search-button" %>
       </div>
     <% end %>
   </div>
 
-  <div class="farmers-layout">
-    <% @farmers.each do |farmer| %>
-      <%= link_to farmer_path(farmer), class: "farmer-card-link" do %>
-        <div class="farmer-card">
-          <div class="farmer-info">
-            <h3 class="farmer-name"><%= farmer.name %></h3>
-            <p class="farmer-contact">
-              <span>Contact:</span> <%= farmer.contact_info %>
-            </p>
-            <p class="farmer-address">
-              <span>Address:</span> <%= farmer.location %>
-            </p>
-            <p class="farmer-description">
-              <span>Description:</span> <%= farmer.description %>
-            </p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
 
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+  <div class="main-content">
+    <div class="farmers-section">
+      <div class="farmers-layout">
+        <% @farmers.each do |farmer| %>
+          <%= link_to farmer_path(farmer), class: "farmer-card-link" do %>
+            <div class="farmer-card">
+              <div class="farmer-info">
+                <h3 class="farmer-name"><%= farmer.name %></h3>
+                <p class="farmer-contact">
+                  <span>Contact:</span> <%= farmer.contact_info %>
+                </p>
+                <p class="farmer-address">
+                  <span>Address:</span> <%= farmer.location %>
+                </p>
+                <p class="farmer-description">
+                  <%= farmer.description %>
+                </p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <div class="map-container">
+        <div style="width: 100%; height: 100%;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+  </div>
