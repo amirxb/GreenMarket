@@ -18,19 +18,31 @@ class CartItemsController < ApplicationController
       redirect_to cart_path
     else
       flash[:alert] = "Failed to add item."
-      redirect_to product_path(@product)
+      redirect_to farmer_product_path(@product.farmer, @product)
     end
   end
-
 
   def update
     @cart_item = CartItem.find(params[:id])
 
     if @cart_item.update(cart_item_params)
-      redirect_to cart_path(@cart_item.cart)
+      redirect_to cart_path
     else
-      redirect_to cart_path(@cart_item.cart), alert: 'Unable to update item.'
+      redirect_to cart_path, alert: 'Unable to update item.'
     end
+  end
+
+  def update_quantity
+    @cart_item = CartItem.find(params[:id])
+    new_quantity = params[:quantity].to_i
+
+    if new_quantity > 0
+      @cart_item.update(quantity: new_quantity)
+    else
+      @cart_item.destroy
+    end
+
+    redirect_to cart_path
   end
 
   def destroy
@@ -47,6 +59,6 @@ class CartItemsController < ApplicationController
 
   def current_user_cart
     current_user.carts.find_by(status: 'active') ||
-    current_user.carts.create(status: 'active')
+      current_user.carts.create(status: 'active')
   end
 end

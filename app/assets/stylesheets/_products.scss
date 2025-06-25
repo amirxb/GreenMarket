@@ -42,12 +42,13 @@
   justify-content: flex-start;
 
 .btn {
-      background-color: #4CAF50;
+      background-color: #3A5A40;
       padding: 10px 20px;
       border-radius: 8px;
 
       &:hover {
-        background-color: #45a049;
+        background-color: #2e4833;
+        color: white;
       }
     }
   }
@@ -59,16 +60,16 @@
   margin-top: 20px;
 
   a {
+    background-color: #3A5A40;
     text-decoration: none;
-    color: #4CAF50;
+    color: white;
     font-weight: bold;
     padding: 8px 16px;
-    border: 1px solid #4CAF50;
     border-radius: 8px;
     transition: background-color 0.9s ease;
 
     &:hover {
-      background-color: #4CAF50;
+      background-color: #2e4833;
       color: white;
     }
   }
