@@ -39,7 +39,7 @@
   opacity: 0.95;
 }
 
-button {
+.home-button {
   background-color: #3A5A40;
   border: none;
   border-radius: 3rem;
@@ -47,7 +47,7 @@ button {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #582f0e;
+    background-color: #2e4833;
   }
 
   a {
