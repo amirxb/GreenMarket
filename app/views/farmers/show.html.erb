@@ -1,16 +1,24 @@
-<h1><%= @farmer.name %></h1>
-<p><%= @farmer.location %></p>
-
-<h2>Products</h2>
-
-<div class="products">
-  <% @farmer.products.each do |product| %>
-    <div class="product-card">
-      <h3><%= product.name %></h3>
-      <p>Price: Rs <%= product.price %></p>
-      <%= link_to "View Details", farmer_product_path(@farmer, product) %>
+<div class="product-list-page">
+  <div class="top-row">
+    <div class="title-section">
+      <h1 class="page-title">Products</h1>
+      <p class="page-subtitle">Farmer: <%= @farmer.name %></p>
+      <p class="page-subtitle">Address: <%= @farmer.location %></p>
     </div>
-  <% end %>
+  </div>
+
+
+  <div class="product-grid">
+    <% @farmer.products.each do |product| %>
+      <div class="product-card">
+        <h3><%= product.name %></h3>
+        <p>Price: Rs <%= product.price %></p>
+        <%= link_to "View Details", farmer_product_path(@farmer, product), class: "product-link" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "Back to Farmers", farmers_path, class: "back-link" %>
 </div>
 
-<%= link_to "Back to Farmers", farmers_path %>
+https://res.cloudinary.com/draltripq/image/upload/v1750850699/mockup-graphics-Kl3467edwsE-unsplash_tpfy10.jpg

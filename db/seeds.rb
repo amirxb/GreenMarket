@@ -38,6 +38,9 @@ Farmer.create!([
 puts "#{Farmer.count} Farmers created."
 
 
+
+
+
 puts "Creating products..."
 Product.create!([
   {
