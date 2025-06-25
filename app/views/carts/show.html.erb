@@ -22,8 +22,8 @@
                   <%= f.input :quantity, collection: 1..100, selected: item.quantity, input_html: { onchange: 'this.form.submit();' }, label: false %>
                 <% end %>
               </td>
-              <td><%= item.product.price %></td>
-              <td><%= item.product.price * item.quantity %></td>
+              <td>Rs <%= number_with_precision(item.product.price, precision: 2) %></td>
+              <td>Rs <%= number_with_precision(item.product.price * item.quantity, precision: 2) %></td>
               <td>
                 <%= simple_form_for item, url: cart_item_path(item), method: :delete, html: { local: true } do |f| %>
                   <%= f.button :submit, "Remove", class: "btn-sm" %>
@@ -36,7 +36,8 @@
     </div>
 
     <div class="cart-total">
-      <p><strong>Total Price:</strong> Rs <%= @cart.cart_items.sum { |item| item.product.price * item.quantity } %></p>
+      <% total_price = @cart.cart_items.sum { |item| item.product.price * item.quantity } %>
+    <p><strong>Total Price: Rs <%= number_with_precision(total_price, precision: 2) %></strong></p>
 
       <div class="cart-actions">
         <%= link_to "Checkout", new_order_path, class: "btn btn-primary" %>
