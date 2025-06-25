@@ -28,4 +28,39 @@
 .nav-link {
   font-size: 1.2rem;
   color: #FFFFFF;
+
+
+  &:hover {
+    color: #FFFFFF;
+    transform: scale(1.1);
+  }
+}
+
+.nav-link i {
+  transition: all .3ms ease-in-out;
+
+  &:hover {
+    color: #FFFFFF;
+    transform: scale(1.1);
+  }
+}
+
+.nav-icon  {
+  position: relative;
+
+  .notif-count, .cart-item-count  {
+    background-color: red;
+    border: 1px solid #3A5A40;
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    font-size: .75rem;
+    width: 16px;
+    color: white !important;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
