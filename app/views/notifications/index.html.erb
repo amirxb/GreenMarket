@@ -1,22 +1,24 @@
-<div class='notification-box'>
-<h1>Your Notifications</h1>
+<div class="notification-page">
+  <div class='notification-box'>
+  <h1>Your Notifications</h1>
 
-<% if @notifications.any? %>
-  <ul class="list-group">
-    <% @notifications.each do |notification| %>
-      <li class="list-group-item <%= 'fw-bold' unless notification.read %>">
-        <div class="notification-content">
-        <% if notification.read %>
-        <span><%= notification.content %></span>
-        <% else %>
-          <%= link_to notification.content, mark_as_read_notification_path(notification), method: :patch, class: 'text-decoration-none text-reset' %>
-        <% end %>
-        <small class="text-muted d-block"><%= time_ago_in_words(notification.created_at) %> ago</small>
-      </div>
-      </li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No notifications yet.</p>
-<% end %>
+  <% if @notifications.any? %>
+    <ul class="list-group">
+      <% @notifications.each do |notification| %>
+        <li class="list-group-item <%= 'fw-bold' unless notification.read %>">
+          <div class="notification-content">
+          <% if notification.read %>
+          <span><%= notification.content %></span>
+          <% else %>
+            <%= link_to notification.content, mark_as_read_notification_path(notification), method: :patch, class: 'text-decoration-none text-reset' %>
+          <% end %>
+          <small class="text-muted d-block"><%= time_ago_in_words(notification.created_at) %> ago</small>
+        </div>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No notifications yet.</p>
+  <% end %>
+  </div>
 </div>
