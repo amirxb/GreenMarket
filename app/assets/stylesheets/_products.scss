@@ -6,6 +6,7 @@
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
 }
 
 .product-header {
@@ -13,9 +14,10 @@
   margin-bottom: 25px;
   border-bottom: 1px solid #ddd;
 
-  h1 {
-    font-size: 32px;
+  .product-title {
+    font-size: 34px;
     margin-bottom: 8px;
+    font-family: "Afacad", sans-serif;
   }
 
   h2 {

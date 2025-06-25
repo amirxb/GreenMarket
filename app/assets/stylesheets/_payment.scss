@@ -5,6 +5,8 @@
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+
 
   h1{
     text-align: center;
@@ -13,6 +15,7 @@
     padding-bottom: 15px;
     margin-bottom: 30px;
     border-bottom: 1px solid #ddd;
+    font-family: "Afacad", sans-serif;
   }
 
     h3 {
@@ -28,7 +31,16 @@
 .payment-container {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap; /* keeps it responsive */
+  flex-wrap: wrap;
+
+  .btn {
+    background-color: #3A5A40;
+    color: white;
+
+      &:hover {
+      background-color: #2e4833;
+    }
+  }
 }
 
 .payment-form, .order-summary {
@@ -50,17 +62,13 @@
     margin-bottom: 30px;
     border-bottom: 1px solid darkgrey;
   }
-
-
 }
 
 
 .order-summary th {
   background-color: #CFE1B9;
-
 }
 
 .order-summary td {
   background-color: #CFE1B9;
- ;
 }
