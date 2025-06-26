@@ -32,7 +32,7 @@
             <div class="farmer-card">
               <div class="farmer-image-container">
                 <% if farmer.image.attached? %>
-                  <%= cl_image_tag farmer.image.key, cloud_name: "draltripq", secure: true, class: "farmer-image" %>
+                  <%= cl_image_tag farmer.image.key, class: "farmer-image" %>
                 <% else %>
                   <div class="farmer-image-placeholder">
                     <i class="fa-solid fa-user"></i>

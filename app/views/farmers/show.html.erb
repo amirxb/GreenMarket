@@ -10,14 +10,22 @@
 
   <div class="product-grid">
     <% @farmer.products.each do |product| %>
-      <div class="product-card">
-        <h3><%= product.name %></h3>
-        <p>Price: Rs <%= product.price %></p>
-        <%= link_to "View Details", farmer_product_path(@farmer, product), class: "product-link" %>
-      </div>
+    <div class="product-card">
+        <div class="product-image-container">
+          <% if product.photo.attached? %>
+            <%= cl_image_tag product.photo.key, class: "product-image" %>
+          <% else %>
+            <div class="no-image-placeholder">
+              <span>No Image Available</span>
+            </div>
+          <% end %>
+        </div>
+      <h3><%= product.name %></h3>
+      <p>Price: Rs <%= product.price %></p>
+      <%= link_to "View Details", farmer_product_path(@farmer, product), class: "product-link" %>
+    </div>
     <% end %>
   </div>
 
   <%= link_to "Back to Farmers", farmers_path, class: "back-link" %>
 </div>
-
