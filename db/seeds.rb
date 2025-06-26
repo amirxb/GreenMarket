@@ -143,230 +143,324 @@ puts "#{Farmer.count} Farmers created."
 
 
 puts "Creating products..."
-Product.create!([
-  {
-    name: "Sweet Valley Banana",
-    description: "Grown in lush valleys, these bananas are naturally sweet and perfect for smoothies, snacking, or baking.",
-    price: "12.00",
-    stock: 10,
-    farmer_id: 1
-  },
-  {
-    name: "Cabbage",
-    description: "A crisp, leafy vegetable ideal for stir-fries, pickling, or a crunchy salad base.",
-    price: "32.00",
-    stock: 10,
-    farmer_id: 2
-  },
-  {
-    name: "Strawberry",
-    description: "Vibrant red strawberries harvested at peak ripeness, great for desserts or a fresh snack.",
-    price: "25.00",
-    stock: 10,
-    farmer_id: 1
-  },
-  {
-    name: "Carrot",
-    description: "Sweet and crunchy, these carrots are packed with beta-carotene and farm-fresh flavor.",
-    price: "17.00",
-    stock: 10,
-    farmer_id: 2
-  },
-  {
-    name: "Mango",
-    description: "Tropical and juicy, perfect for eating fresh, blending into lassis, or making chutneys.",
-    price: "12.50",
-    stock: 10,
-    farmer_id: 1
-  },
-  {
-    name: "Lemon",
-    description: "Zesty and tangy, these lemons add brightness to any dish or drink.",
-    price: "27.23",
-    stock: 12,
-    farmer_id: 2
-  },
-  {
-    name: "Lychee",
-    description: "Sweet, floral lychees that are perfect for snacking or pairing with desserts.",
-    price: "25.00",
-    stock: 18,
-    farmer_id: 1
-  },
-  {
-    name: "Pineapple",
-    description: "Golden and juicy, this pineapple brings tropical flavor to your table.",
-    price: "13.39",
-    stock: 19,
-    farmer_id: 2
-  },
-  {
-    name: "Starfruit",
-    description: "With its unique shape and tangy taste, starfruit adds flair to your fruit bowls.",
-    price: "13.07",
-    stock: 8,
-    farmer_id: 1
-  },
-  {
-    name: "Orange",
-    description: "Citrusy and sweet, these oranges are full of vitamin C and great for juicing.",
-    price: "34.51",
-    stock: 18,
-    farmer_id: 2
-  },
-  {
-    name: "Pomegranate",
-    description: "Bursting with ruby-red seeds, perfect for antioxidants and fresh taste.",
-    price: "31.09",
-    stock: 11,
-    farmer_id: 1
-  },
-  {
-    name: "Avocado",
-    description: "Creamy and rich, avocados are perfect for toast, salads, or guacamole.",
-    price: "17.39",
-    stock: 8,
-    farmer_id: 2
-  },
-  {
-    name: "Papaya",
-    description: "Soft, sweet papayas ideal for breakfast bowls or smoothies.",
-    price: "28.58",
-    stock: 18,
-    farmer_id: 2
-  },
-  {
-    name: "Guava",
-    description: "A fragrant fruit with a tropical punch, guava is great eaten fresh or juiced.",
-    price: "39.84",
-    stock: 11,
-    farmer_id: 1
-  },
-  {
-    name: "Apple",
-    description: "Crunchy and refreshing, apples make a perfect healthy snack on the go.",
-    price: "26.84",
-    stock: 21,
-    farmer_id: 2
-  },
-  {
-    name: "Coconut",
-    description: "Naturally hydrating with creamy flesh, coconuts are a tropical staple.",
-    price: "37.93",
-    stock: 18,
-    farmer_id: 1
-  },
-  {
-    name: "Pear",
-    description: "Juicy and smooth, pears pair well with cheese or as a standalone dessert.",
-    price: "34.86",
-    stock: 17,
-    farmer_id: 2
-  },
-  {
-    name: "Passion Fruit",
-    description: "Tart and aromatic, passion fruit enhances drinks, desserts, or yoghurts.",
-    price: "23.85",
-    stock: 12,
-    farmer_id: 1
-  },
-  {
-    name: "Zucchini",
-    description: "Mild and tender, zucchini is great grilled, sautéed, or spiralized.",
-    price: "15.99",
-    stock: 22,
-    farmer_id: 2
-  },
-  {
-    name: "Sweet Corn",
-    description: "Golden kernels of sweetness, great on the cob or in hearty stews.",
-    price: "15.36",
-    stock: 19,
-    farmer_id: 1
-  },
-  {
-    name: "Bell Pepper",
-    description: "Colorful and crisp, these peppers add crunch and color to any meal.",
-    price: "37.41",
-    stock: 18,
-    farmer_id: 2
-  },
-  {
-    name: "Beetroot",
-    description: "Earthy and nutrient-rich, beetroot is great roasted or pickled.",
-    price: "16.81",
-    stock: 16,
-    farmer_id: 1
-  },
-  {
-    name: "Broccoli",
-    description: "Packed with vitamins, broccoli is great steamed, stir-fried, or raw.",
-    price: "14.32",
-    stock: 25,
-    farmer_id: 2
-  },
-  {
-    name: "Green Beans",
-    description: "Tender and snappy, green beans work well in sautés or stews.",
-    price: "14.56",
-    stock: 11,
-    farmer_id: 1
-  },
-  {
-    name: "Lettuce",
-    description: "Light and refreshing, perfect as the base for your favorite salads.",
-    price: "21.65",
-    stock: 9,
-    farmer_id: 2
-  },
-  {
-    name: "Eggplant",
-    description: "Velvety and versatile, eggplant is ideal for curries, grilling, or moussaka.",
-    price: "10.63",
-    stock: 22,
-    farmer_id: 1
-  },
-  {
-    name: "Cauliflower",
-    description: "Fluffy florets great for roasting, mashing, or low-carb meals.",
-    price: "15.68",
-    stock: 10,
-    farmer_id: 2
-  },
-  {
-    name: "Pumpkin",
-    description: "Naturally sweet and earthy, pumpkin shines in soups, pies, and curries.",
-    price: "16.75",
-    stock: 21,
-    farmer_id: 1
-  },
-  {
-    name: "Spinach",
-    description: "Tender leaves packed with iron, perfect for salads or sautéed sides.",
-    price: "39.37",
-    stock: 24,
-    farmer_id: 1
-  },
-  {
-    name: "Chili",
-    description: "Hot and punchy, these chilies bring heat to any dish.",
-    price: "38.24",
-    stock: 16,
-    farmer_id: 2
-  },
-  {
-    name: "Cucumber",
-    description: "Cool and crunchy, cucumbers are refreshing raw or in pickles.",
-    price: "29.84",
-    stock: 18,
-    farmer_id: 1
-  },
-  {
-    name: "Garlic",
-    description: "Aromatic and essential, garlic brings bold flavor to every cuisine.",
-    price: "38.58",
-    stock: 25,
-    farmer_id: 2
-  }
-])
+banana = Product.create!(
+  name: "Banana",
+  description: "Grown in lush valleys, these bananas are naturally sweet and perfect for smoothies, snacking, or baking.",
+  price: "12.00",
+  stock: 10,
+  farmer_id: 1
+)
+photo_banana = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/banana_sample_id.jpg")
+banana.photo.attach(io: photo_banana, filename: 'banana.jpg', content_type: 'image/jpeg')
+
+cabbage = Product.create!(
+  name: "Cabbage",
+  description: "A crisp, leafy vegetable ideal for stir-fries, pickling, or a crunchy salad base.",
+  price: "32.00",
+  stock: 10,
+  farmer_id: 2
+)
+photo_cabbage = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/cabbage_sample_id.jpg")
+cabbage.photo.attach(io: photo_cabbage, filename: 'cabbage.jpg', content_type: 'image/jpeg')
+
+strawberry = Product.create!(
+  name: "Strawberry",
+  description: "Vibrant red strawberries harvested at peak ripeness, great for desserts or a fresh snack.",
+  price: "25.00",
+  stock: 10,
+  farmer_id: 1
+)
+photo_strawberry = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/strawberry_sample_id.jpg")
+strawberry.photo.attach(io: photo_strawberry, filename: 'strawberry.jpg', content_type: 'image/jpeg')
+
+carrot = Product.create!(
+  name: "Carrot",
+  description: "Sweet and crunchy, these carrots are packed with beta-carotene and farm-fresh flavor.",
+  price: "17.00",
+  stock: 10,
+  farmer_id: 2
+)
+photo_carrot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/carrot_sample_id.jpg")
+carrot.photo.attach(io: photo_carrot, filename: 'carrot.jpg', content_type: 'image/jpeg')
+
+mango = Product.create!(
+  name: "Mango",
+  description: "Tropical and juicy, perfect for eating fresh, blending into lassis, or making chutneys.",
+  price: "12.50",
+  stock: 10,
+  farmer_id: 1
+)
+photo_mango = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/mango_sample_id.jpg")
+mango.photo.attach(io: photo_mango, filename: 'mango.jpg', content_type: 'image/jpeg')
+
+lemon = Product.create!(
+  name: "Lemon",
+  description: "Zesty and tangy, these lemons add brightness to any dish or drink.",
+  price: "27.23",
+  stock: 12,
+  farmer_id: 2
+)
+photo_lemon = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/lemon_sample_id.jpg")
+lemon.photo.attach(io: photo_lemon, filename: 'lemon.jpg', content_type: 'image/jpeg')
+
+lychee = Product.create!(
+  name: "Lychee",
+  description: "Sweet, floral lychees that are perfect for snacking or pairing with desserts.",
+  price: "25.00",
+  stock: 18,
+  farmer_id: 1
+)
+photo_lychee = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/lychee_sample_id.jpg")
+lychee.photo.attach(io: photo_lychee, filename: 'lychee.jpg', content_type: 'image/jpeg')
+
+pineapple = Product.create!(
+  name: "Pineapple",
+  description: "Golden and juicy, this pineapple brings tropical flavor to your table.",
+  price: "13.39",
+  stock: 19,
+  farmer_id: 2
+)
+photo_pineapple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pineapple_sample_id.jpg")
+pineapple.photo.attach(io: photo_pineapple, filename: 'pineapple.jpg', content_type: 'image/jpeg')
+
+starfruit = Product.create!(
+  name: "Starfruit",
+  description: "With its unique shape and tangy taste, starfruit adds flair to your fruit bowls.",
+  price: "13.07",
+  stock: 8,
+  farmer_id: 1
+)
+photo_starfruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/starfruit_sample_id.jpg")
+starfruit.photo.attach(io: photo_starfruit, filename: 'starfruit.jpg', content_type: 'image/jpeg')
+
+orange = Product.create!(
+  name: "Orange",
+  description: "Citrusy and sweet, these oranges are full of vitamin C and great for juicing.",
+  price: "34.51",
+  stock: 18,
+  farmer_id: 2
+)
+photo_orange = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/orange_sample_id.jpg")
+orange.photo.attach(io: photo_orange, filename: 'orange.jpg', content_type: 'image/jpeg')
+
+pomegranate = Product.create!(
+  name: "Pomegranate",
+  description: "Bursting with ruby-red seeds, perfect for antioxidants and fresh taste.",
+  price: "31.09",
+  stock: 11,
+  farmer_id: 1
+)
+photo_pomegranate = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pomegranate_sample_id.jpg")
+pomegranate.photo.attach(io: photo_pomegranate, filename: 'pomegranate.jpg', content_type: 'image/jpeg')
+
+avocado = Product.create!(
+  name: "Avocado",
+  description: "Creamy and rich, avocados are perfect for toast, salads, or guacamole.",
+  price: "17.39",
+  stock: 8,
+  farmer_id: 2
+)
+photo_avocado = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/avocado_sample_id.jpg")
+avocado.photo.attach(io: photo_avocado, filename: 'avocado.jpg', content_type: 'image/jpeg')
+
+papaya = Product.create!(
+  name: "Papaya",
+  description: "Soft, sweet papayas ideal for breakfast bowls or smoothies.",
+  price: "28.58",
+  stock: 18,
+  farmer_id: 2
+)
+photo_papaya = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/papaya_sample_id.jpg")
+papaya.photo.attach(io: photo_papaya, filename: 'papaya.jpg', content_type: 'image/jpeg')
+
+guava = Product.create!(
+  name: "Guava",
+  description: "A fragrant fruit with a tropical punch, guava is great eaten fresh or juiced.",
+  price: "39.84",
+  stock: 11,
+  farmer_id: 1
+)
+photo_guava = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/guava_sample_id.jpg")
+guava.photo.attach(io: photo_guava, filename: 'guava.jpg', content_type: 'image/jpeg')
+
+apple = Product.create!(
+  name: "Apple",
+  description: "Crunchy and refreshing, apples make a perfect healthy snack on the go.",
+  price: "26.84",
+  stock: 21,
+  farmer_id: 2
+)
+photo_apple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/apple_sample_id.jpg")
+apple.photo.attach(io: photo_apple, filename: 'apple.jpg', content_type: 'image/jpeg')
+
+coconut = Product.create!(
+  name: "Coconut",
+  description: "Naturally hydrating with creamy flesh, coconuts are a tropical staple.",
+  price: "37.93",
+  stock: 18,
+  farmer_id: 1
+)
+photo_coconut = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/coconut_sample_id.jpg")
+coconut.photo.attach(io: photo_coconut, filename: 'coconut.jpg', content_type: 'image/jpeg')
+
+pear = Product.create!(
+  name: "Pear",
+  description: "Juicy and smooth, pears pair well with cheese or as a standalone dessert.",
+  price: "34.86",
+  stock: 17,
+  farmer_id: 2
+)
+photo_pear = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pear_sample_id.jpg")
+pear.photo.attach(io: photo_pear, filename: 'pear.jpg', content_type: 'image/jpeg')
+
+passion_fruit = Product.create!(
+  name: "Passion Fruit",
+  description: "Tart and aromatic, passion fruit enhances drinks, desserts, or yoghurts.",
+  price: "23.85",
+  stock: 12,
+  farmer_id: 1
+)
+photo_passion_fruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/passion_fruit_sample_id.jpg")
+passion_fruit.photo.attach(io: photo_passion_fruit, filename: 'passion_fruit.jpg', content_type: 'image/jpeg')
+
+zucchini = Product.create!(
+  name: "Zucchini",
+  description: "Mild and tender, zucchini is great grilled, sautéed, or spiralized.",
+  price: "15.99",
+  stock: 22,
+  farmer_id: 2
+)
+photo_zucchini = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/zucchini_sample_id.jpg")
+zucchini.photo.attach(io: photo_zucchini, filename: 'zucchini.jpg', content_type: 'image/jpeg')
+
+sweet_corn = Product.create!(
+  name: "Sweet Corn",
+  description: "Golden kernels of sweetness, great on the cob or in hearty stews.",
+  price: "15.36",
+  stock: 19,
+  farmer_id: 1
+)
+photo_sweet_corn = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/sweet_corn_sample_id.jpg")
+sweet_corn.photo.attach(io: photo_sweet_corn, filename: 'sweet_corn.jpg', content_type: 'image/jpeg')
+
+bell_pepper = Product.create!(
+  name: "Bell Pepper",
+  description: "Colorful and crisp, these peppers add crunch and color to any meal.",
+  price: "37.41",
+  stock: 18,
+  farmer_id: 2
+)
+photo_bell_pepper = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/bell_pepper_sample_id.jpg")
+bell_pepper.photo.attach(io: photo_bell_pepper, filename: 'bell_pepper.jpg', content_type: 'image/jpeg')
+
+beetroot = Product.create!(
+  name: "Beetroot",
+  description: "Earthy and nutrient-rich, beetroot is great roasted or pickled.",
+  price: "16.81",
+  stock: 16,
+  farmer_id: 1
+)
+photo_beetroot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/beetroot_sample_id.jpg")
+beetroot.photo.attach(io: photo_beetroot, filename: 'beetroot.jpg', content_type: 'image/jpeg')
+
+broccoli = Product.create!(
+  name: "Broccoli",
+  description: "Packed with vitamins, broccoli is great steamed, stir-fried, or raw.",
+  price: "14.32",
+  stock: 25,
+  farmer_id: 2
+)
+photo_broccoli = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/broccoli_sample_id.jpg")
+broccoli.photo.attach(io: photo_broccoli, filename: 'broccoli.jpg', content_type: 'image/jpeg')
+
+green_beans = Product.create!(
+  name: "Green Beans",
+  description: "Tender and snappy, green beans work well in sautés or stews.",
+  price: "14.56",
+  stock: 11,
+  farmer_id: 1
+)
+photo_green_beans = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/green_beans_sample_id.jpg")
+green_beans.photo.attach(io: photo_green_beans, filename: 'green_beans.jpg', content_type: 'image/jpeg')
+
+lettuce = Product.create!(
+  name: "Lettuce",
+  description: "Light and refreshing, perfect as the base for your favorite salads.",
+  price: "21.65",
+  stock: 9,
+  farmer_id: 2
+)
+photo_lettuce = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/lettuce_sample_id.jpg")
+lettuce.photo.attach(io: photo_lettuce, filename: 'lettuce.jpg', content_type: 'image/jpeg')
+
+eggplant = Product.create!(
+  name: "Eggplant",
+  description: "Velvety and versatile, eggplant is ideal for curries, grilling, or moussaka.",
+  price: "10.63",
+  stock: 22,
+  farmer_id: 1
+)
+photo_eggplant = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/eggplant_sample_id.jpg")
+eggplant.photo.attach(io: photo_eggplant, filename: 'eggplant.jpg', content_type: 'image/jpeg')
+
+cauliflower = Product.create!(
+  name: "Cauliflower",
+  description: "Fluffy florets great for roasting, mashing, or low-carb meals.",
+  price: "15.68",
+  stock: 10,
+  farmer_id: 2
+)
+photo_cauliflower = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/cauliflower_sample_id.jpg")
+cauliflower.photo.attach(io: photo_cauliflower, filename: 'cauliflower.jpg', content_type: 'image/jpeg')
+
+pumpkin = Product.create!(
+  name: "Pumpkin",
+  description: "Naturally sweet and earthy, pumpkin shines in soups, pies, and curries.",
+  price: "16.75",
+  stock: 21,
+  farmer_id: 1
+)
+photo_pumpkin = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pumpkin_sample_id.jpg")
+pumpkin.photo.attach(io: photo_pumpkin, filename: 'pumpkin.jpg', content_type: 'image/jpeg')
+
+spinach = Product.create!(
+  name: "Spinach",
+  description: "Tender leaves packed with iron, perfect for salads or sautéed sides.",
+  price: "39.37",
+  stock: 24,
+  farmer_id: 1
+)
+photo_spinach = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/spinach_sample_id.jpg")
+spinach.photo.attach(io: photo_spinach, filename: 'spinach.jpg', content_type: 'image/jpeg')
+
+chili = Product.create!(
+  name: "Chili",
+  description: "Hot and punchy, these chilies bring heat to any dish.",
+  price: "38.24",
+  stock: 16,
+  farmer_id: 2
+)
+photo_chili = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/chili_sample_id.jpg")
+chili.photo.attach(io: photo_chili, filename: 'chili.jpg', content_type: 'image/jpeg')
+
+cucumber = Product.create!(
+  name: "Cucumber",
+  description: "Cool and crunchy, cucumbers are refreshing raw or in pickles.",
+  price: "29.84",
+  stock: 18,
+  farmer_id: 1
+)
+photo_cucumber = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/cucumber_sample_id.jpg")
+cucumber.photo.attach(io: photo_cucumber, filename: 'cucumber.jpg', content_type: 'image/jpeg')
+
+garlic = Product.create!(
+  name: "Garlic",
+  description: "Aromatic and essential, garlic brings bold flavor to every cuisine.",
+  price: "38.58",
+  stock: 25,
+  farmer_id: 2
+)
+photo_garlic = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/garlic_sample_id.jpg")
+garlic.photo.attach(io: photo_garlic, filename: 'garlic.jpg', content_type: 'image/jpeg')
+
 puts "#{Product.count} Products created."
