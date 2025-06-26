@@ -1,24 +1,33 @@
 <div class="product-box">
-  <div class= "product-header">
-    <h1 class="product-title"><%= @product.name %></h1>
-    <h2><strong>Farmer:</strong> <%= @product.farmer.name %></h2>
-  </div>
+  <div class="product-content">
 
-  <div class="product-details">
-    <p><strong>Price:</strong> Rs <%= @product.price %></p>
-    <p><strong>Stock:</strong> <%= @product.stock %> available</p>
-    <p><strong>Description:</strong> <%= @product.description %></p>
-  </div>
+    <div class="specific-product-image-container">
+      <%= cl_image_tag(@product.photo.key, class: "specific-product-image") if @product.photo.attached? %>
+    </div>
 
-  <div class="product-actions">
-    <%= simple_form_for :cart_item, url: cart_items_path, method: :post do |f| %>
-      <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
-      <%= f.button :submit, "Add to Cart" %>
-    <% end %>
-  </div>
+    <div class="product-info">
+      <div class="product-header">
+        <h1 class="product-title"><%= @product.name %></h1>
+        <h2><strong>Farmer:</strong> <%= @product.farmer.name %></h2>
+      </div>
 
-  <div class="navigation">
-    <%= link_to "Back to #{@product.farmer.name}", farmer_path(@product.farmer) %>
-    <%= link_to "All Farmers", farmers_path %>
+      <div class="product-details">
+        <p><strong>Description:</strong> <%= @product.description %></p>
+        <p><strong>Price:</strong> Rs <%= @product.price %></p>
+      </div>
+
+      <div class="product-actions">
+        <%= simple_form_for :cart_item, url: cart_items_path, method: :post do |f| %>
+          <%= f.input :product_id, as: :hidden, input_html: { value: @product.id } %>
+          <%= f.button :submit, "Add to Cart", class: "btn-cart" %>
+        <% end %>
+
+        <div class="navigation">
+          <%= link_to "Back to #{@product.farmer.name}", farmer_path(@product.farmer) %>
+          <%= link_to "All Farmers", farmers_path %>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
