@@ -30,6 +30,15 @@
         <% @farmers.each do |farmer| %>
           <%= link_to farmer_path(farmer), class: "farmer-card-link" do %>
             <div class="farmer-card">
+              <div class="farmer-image-container">
+                <% if farmer.image.attached? %>
+                  <%= cl_image_tag farmer.image.key, cloud_name: "draltripq", secure: true, class: "farmer-image" %>
+                <% else %>
+                  <div class="farmer-image-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                <% end %>
+              </div>
               <div class="farmer-info">
                 <h3 class="farmer-name"><%= farmer.name %></h3>
                 <p class="farmer-contact">

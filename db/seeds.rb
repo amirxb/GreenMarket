@@ -7,6 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "open-uri"
+
 puts "Cleaning database..."
 Product.destroy_all
 Farmer.destroy_all
@@ -15,80 +17,128 @@ ActiveRecord::Base.connection.reset_pk_sequence!('farmers')
 
 
 puts "Creating farmers..."
-Farmer.create!([
-  {
-    name: "Ravi",
-    location: "MU, Ave Rosier, Amaury 31401",
-    description: "Passionate about sustainable farming, Ravi brings fresh vegetables straight from his fields in Belle Vue every morning.",
-    contact_info: "5792 1010"
-  },
-  {
-    name: "Asha",
-    location: "Royal Road Plaine Des Roches Riviere Du Rempart MU, 31902",
-    description: "Known for her organic herbs and leafy greens, Asha is a trusted grower from Saint Pierre with a love for clean, healthy food.",
-    contact_info: "5785 3093"
-  },
-  {
-    name: "Moha",
-    location: "VPP9+62G, Shantineketan MU, Road, Roches Noires 31207",
-    description: "Based in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.",
-    contact_info: "5726 3238"
-  },
-  {
-    name: "Rani",
-    location: "Mare La Chaux, Post de Flacq MU, 31203",
-    description: "Rani offers freshly picked guavas and jackfruits, grown without any harmful chemicals.",
-    contact_info: "5834 1122"
-  },
-  {
-    name: "Dev",
-    location: "Vacoas MU, Plaines Wilhems 74208",
-    description: "Dev is known for cultivating high-quality carrots and radishes, supplying nearby villages weekly.",
-    contact_info: "5943 2211"
-  },
-  {
-    name: "Farah",
-    location: "Bambous MU, Black River 90203",
-    description: "Farah specializes in growing fresh coriander, mint, and other herbs using hydroponics.",
-    contact_info: "5922 8890"
-  },
-  {
-    name: "Yash",
-    location: "Sebastopol, Central Flacq 31301",
-    description: "Yash runs a family farm producing organic tomatoes and capsicum for the local market.",
-    contact_info: "5899 4455"
-  },
-  {
-    name: "Pooja",
-    location: "Union Vale, Grand Port 60302",
-    description: "Pooja supplies farm-fresh eggs and seasonal vegetables to nearby schools and households.",
-    contact_info: "5748 6677"
-  },
-  {
-    name: "Vikash",
-    location: "Chamarel, Black River 90402",
-    description: "Vikash cultivates exotic mushrooms and wild herbs in the highland regions of Chamarel.",
-    contact_info: "5863 9900"
-  },
-  {
-    name: "Amina",
-    location: "Triolet, MU 21301",
-    description: "Amina grows chillies, eggplants, and okra using sustainable and water-efficient methods.",
-    contact_info: "5988 7654"
-  },
-  {
-    name: "Nita",
-    location: "Valetta Road, Moka MU, 80808",
-    description: "Nita is a dedicated horticulturist from Moka who specializes in cultivating organic vegetables with care and precision.",
-    contact_info: "5768 2041"
-  },
-  {
-    name: "Jay",
-    location: "Route Royale, La Laura-Malenga MU, 81402",
-    description: "Jay is a second-generation farmer known for his flavorful fruits and traditional farming methods. He brings vibrant produce to local homes year-round.",
-    contact_info: "5802 9173"
-  }
-])
+
+
+ravi = Farmer.create!(
+  name: "Ravi",
+  location: "MU, Ave Rosier, Amaury 31401",
+  description: "Passionate about sustainable farming, Ravi brings fresh vegetables straight from his fields in Belle Vue every morning.",
+  contact_info: "5792 1010"
+)
+
+photo_ravi = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926470/ravi_w39fyr.jpg")
+ravi.image.attach(io: photo_ravi, filename: 'ravi.jpg', content_type: 'image/jpeg')
+
+
+asha = Farmer.create!(
+  name: "Asha",
+  location: "Royal Road Plaine Des Roches Riviere Du Rempart MU, 31902",
+  description: "Known for her organic herbs and leafy greens, Asha is a trusted grower from Saint Pierre with a love for clean, healthy food.",
+  contact_info: "5785 3093"
+)
+photo_asha = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926461/asha_yd6nks.jpg")
+asha.image.attach(io: photo_asha, filename: 'asha.jpg', content_type: 'image/jpeg')
+
+
+moha = Farmer.create!(
+  name: "Moha",
+  location: "VPP9+62G, Shantineketan MU, Road, Roches Noires 31207",
+  description: "Based in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.",
+  contact_info: "5726 3238"
+)
+photo_moha = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926466/moha_u7bvn1.jpg")
+moha.image.attach(io: photo_moha, filename: 'moha.jpg', content_type: 'image/jpeg')
+
+
+rani = Farmer.create!(
+  name: "Rani",
+  location: "Mare La Chaux, Post de Flacq MU, 31203",
+  description: "Rani offers freshly picked guavas and jackfruits, grown without any harmful chemicals.",
+  contact_info: "5834 1122"
+)
+photo_rani = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926469/rani_hmv24t.jpg")
+rani.image.attach(io: photo_rani, filename: 'rani.jpg', content_type: 'image/jpeg')
+
+
+dev = Farmer.create!(
+  name: "Dev",
+  location: "Vacoas MU, Plaines Wilhems 74208",
+  description: "Dev is known for cultivating high-quality carrots and radishes, supplying nearby villages weekly.",
+  contact_info: "5943 2211"
+)
+photo_dev = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926462/dev_dcghe0.jpg")
+dev.image.attach(io: photo_dev, filename: 'dev.jpg', content_type: 'image/jpeg')
+
+
+farah = Farmer.create!(
+  name: "Farah",
+  location: "Bambous MU, Black River 90203",
+  description: "Farah specializes in growing fresh coriander, mint, and other herbs using hydroponics.",
+  contact_info: "5922 8890"
+)
+photo_farah = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926465/farah_jpnolk.jpg")
+farah.image.attach(io: photo_farah, filename: 'farah.jpg', content_type: 'image/jpeg')
+
+
+yash = Farmer.create!(
+  name: "Yash",
+  location: "Sebastopol, Central Flacq 31301",
+  description: "Yash runs a family farm producing organic tomatoes and capsicum for the local market.",
+  contact_info: "5899 4455"
+)
+photo_yash = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926475/yash_rwk2zq.jpg")
+yash.image.attach(io: photo_yash, filename: 'yash.jpg', content_type: 'image/jpeg')
+
+
+pooja = Farmer.create!(
+  name: "Celine",
+  location: "Union Vale, Grand Port 60302",
+  description: "Celine supplies farm-fresh eggs and seasonal vegetables to nearby schools and households.",
+  contact_info: "5748 6677"
+)
+photo_pooja = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926462/celine_gjzjhl.jpg")
+pooja.image.attach(io: photo_pooja, filename: 'pooja.jpg', content_type: 'image/jpeg')
+
+
+vikash = Farmer.create!(
+  name: "Vikash",
+  location: "Chamarel, Black River 90402",
+  description: "Vikash cultivates exotic mushrooms and wild herbs in the highland regions of Chamarel.",
+  contact_info: "5863 9900"
+)
+photo_vikash = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926473/vikash_cvzfwm.jpg")
+vikash.image.attach(io: photo_vikash, filename: 'vikash.jpg', content_type: 'image/jpeg')
+
+
+amina = Farmer.create!(
+  name: "Amina",
+  location: "Triolet, MU 21301",
+  description: "Amina grows chillies, eggplants, and okra using sustainable and water-efficient methods.",
+  contact_info: "5988 7654"
+)
+photo_amina = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926460/amina_bbumeo.jpg")
+amina.image.attach(io: photo_amina, filename: 'amina.jpg', content_type: 'image/jpeg')
+
+
+nita = Farmer.create!(
+  name: "Nita",
+  location: "Valetta Road, Moka MU, 80808",
+  description: "Nita is a dedicated horticulturist from Moka who specializes in cultivating organic vegetables with care and precision.",
+  contact_info: "5768 2041"
+)
+photo_nita = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926468/nita_j4imqf.jpg")
+nita.image.attach(io: photo_nita, filename: 'nita.jpg', content_type: 'image/jpeg')
+
+
+jay = Farmer.create!(
+  name: "Jay",
+  location: "Route Royale, La Laura-Malenga MU, 81402",
+  description: "Jay is a second-generation farmer known for his flavorful fruits and traditional farming methods.",
+  contact_info: "5802 9173"
+)
+photo_jay = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/jay_f78grw.jpg")
+jay.image.attach(io: photo_jay, filename: 'jay.jpg', content_type: 'image/jpeg')
+
 puts "#{Farmer.count} Farmers created."
 
 
