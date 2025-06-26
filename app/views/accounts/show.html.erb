@@ -10,7 +10,7 @@
     <h2 class="profile-username">@<%= @user.username %></h2>
 
     <div class="profile-info">
-      <strong>Name:</strong><%= @user.name %> <%= @user.surname %></p>
+      <strong>Name: </strong><%= @user.name %> <%= @user.surname %></p>
       <% if @user.bio.present? %><p><strong>Bio:</strong> <%= @user.bio %></p><% end %>
       <% if @user.location.present? %> <p><strong>Location:</strong> <%= @user.location %></p> <% end %>
 

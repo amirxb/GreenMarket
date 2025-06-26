@@ -1,6 +1,4 @@
 <div class="payment-box">
-  <h1>Payment Details</h1>
-
   <% if @order.errors.any? %>
     <div class="alert alert-danger">
       <h4>There were issues with your payment:</h4>
@@ -14,6 +12,7 @@
 
   <div class="payment-container">
     <div class="payment-form">
+      <h1>Payment Details</h1>
       <%= simple_form_for @order do |f| %>
         <div class="form-group">
           <%= f.input :card_number, label: "Card Number", input_html: { placeholder: "1234 5678 9012 3456" } %>
@@ -26,6 +25,9 @@
 
     <div class="order-summary">
       <h3>Order Summary</h3>
+      <div class="summary-image-container">
+        <img class="summary-image" src="https://res.cloudinary.com/draltripq/image/upload/v1750957875/plant_drwqlq.png">
+      </div>
       <table class="table">
         <thead>
           <tr>
