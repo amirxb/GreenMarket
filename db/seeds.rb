@@ -150,7 +150,7 @@ banana = Product.create!(
   stock: 10,
   farmer_id: 1
 )
-photo_banana = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/banana_sample_id.jpg")
+photo_banana = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947823/banana_cvx4fk.jpg")
 banana.photo.attach(io: photo_banana, filename: 'banana.jpg', content_type: 'image/jpeg')
 
 cabbage = Product.create!(
@@ -160,7 +160,7 @@ cabbage = Product.create!(
   stock: 10,
   farmer_id: 2
 )
-photo_cabbage = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/cabbage_sample_id.jpg")
+photo_cabbage = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947832/cabbage_ulj5lz.jpg")
 cabbage.photo.attach(io: photo_cabbage, filename: 'cabbage.jpg', content_type: 'image/jpeg')
 
 strawberry = Product.create!(
@@ -170,7 +170,7 @@ strawberry = Product.create!(
   stock: 10,
   farmer_id: 1
 )
-photo_strawberry = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/strawberry_sample_id.jpg")
+photo_strawberry = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947885/strawberry_e0yied.jpg")
 strawberry.photo.attach(io: photo_strawberry, filename: 'strawberry.jpg', content_type: 'image/jpeg')
 
 carrot = Product.create!(
@@ -180,7 +180,7 @@ carrot = Product.create!(
   stock: 10,
   farmer_id: 2
 )
-photo_carrot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/carrot_sample_id.jpg")
+photo_carrot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947834/carrot_gupbeq.jpg")
 carrot.photo.attach(io: photo_carrot, filename: 'carrot.jpg', content_type: 'image/jpeg')
 
 mango = Product.create!(
@@ -190,7 +190,7 @@ mango = Product.create!(
   stock: 10,
   farmer_id: 1
 )
-photo_mango = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/mango_sample_id.jpg")
+photo_mango = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947861/mango_sadpqh.jpg")
 mango.photo.attach(io: photo_mango, filename: 'mango.jpg', content_type: 'image/jpeg')
 
 lemon = Product.create!(
@@ -200,7 +200,7 @@ lemon = Product.create!(
   stock: 12,
   farmer_id: 2
 )
-photo_lemon = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/lemon_sample_id.jpg")
+photo_lemon = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947854/lemon_cryg0n.jpg")
 lemon.photo.attach(io: photo_lemon, filename: 'lemon.jpg', content_type: 'image/jpeg')
 
 lychee = Product.create!(
@@ -210,7 +210,7 @@ lychee = Product.create!(
   stock: 18,
   farmer_id: 1
 )
-photo_lychee = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/lychee_sample_id.jpg")
+photo_lychee = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947859/lychee_rd9gdq.jpg")
 lychee.photo.attach(io: photo_lychee, filename: 'lychee.jpg', content_type: 'image/jpeg')
 
 pineapple = Product.create!(
@@ -220,7 +220,7 @@ pineapple = Product.create!(
   stock: 19,
   farmer_id: 2
 )
-photo_pineapple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pineapple_sample_id.jpg")
+photo_pineapple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947877/pineapple_kllxxs.jpg")
 pineapple.photo.attach(io: photo_pineapple, filename: 'pineapple.jpg', content_type: 'image/jpeg')
 
 starfruit = Product.create!(
@@ -230,7 +230,7 @@ starfruit = Product.create!(
   stock: 8,
   farmer_id: 1
 )
-photo_starfruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/starfruit_sample_id.jpg")
+photo_starfruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947883/starfruit_yflwie.jpg")
 starfruit.photo.attach(io: photo_starfruit, filename: 'starfruit.jpg', content_type: 'image/jpeg')
 
 orange = Product.create!(
@@ -240,7 +240,7 @@ orange = Product.create!(
   stock: 18,
   farmer_id: 2
 )
-photo_orange = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/orange_sample_id.jpg")
+photo_orange = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947867/orange_tsgt39.jpg")
 orange.photo.attach(io: photo_orange, filename: 'orange.jpg', content_type: 'image/jpeg')
 
 pomegranate = Product.create!(
@@ -250,7 +250,7 @@ pomegranate = Product.create!(
   stock: 11,
   farmer_id: 1
 )
-photo_pomegranate = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pomegranate_sample_id.jpg")
+photo_pomegranate = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947876/pomegranate_vwbo2n.jpg")
 pomegranate.photo.attach(io: photo_pomegranate, filename: 'pomegranate.jpg', content_type: 'image/jpeg')
 
 avocado = Product.create!(
@@ -260,7 +260,7 @@ avocado = Product.create!(
   stock: 8,
   farmer_id: 2
 )
-photo_avocado = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/avocado_sample_id.jpg")
+photo_avocado = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947822/avocado_rtgov5.jpg")
 avocado.photo.attach(io: photo_avocado, filename: 'avocado.jpg', content_type: 'image/jpeg')
 
 papaya = Product.create!(
@@ -270,7 +270,7 @@ papaya = Product.create!(
   stock: 18,
   farmer_id: 2
 )
-photo_papaya = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/papaya_sample_id.jpg")
+photo_papaya = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947865/papaya_ounn5g.jpg")
 papaya.photo.attach(io: photo_papaya, filename: 'papaya.jpg', content_type: 'image/jpeg')
 
 guava = Product.create!(
@@ -280,7 +280,7 @@ guava = Product.create!(
   stock: 11,
   farmer_id: 1
 )
-photo_guava = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/guava_sample_id.jpg")
+photo_guava = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947852/guava_ivonqj.jpg")
 guava.photo.attach(io: photo_guava, filename: 'guava.jpg', content_type: 'image/jpeg')
 
 apple = Product.create!(
@@ -290,7 +290,7 @@ apple = Product.create!(
   stock: 21,
   farmer_id: 2
 )
-photo_apple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/apple_sample_id.jpg")
+photo_apple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947820/apple_dzxbmk.jpg")
 apple.photo.attach(io: photo_apple, filename: 'apple.jpg', content_type: 'image/jpeg')
 
 coconut = Product.create!(
@@ -300,7 +300,7 @@ coconut = Product.create!(
   stock: 18,
   farmer_id: 1
 )
-photo_coconut = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/coconut_sample_id.jpg")
+photo_coconut = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947843/coconut_xqxi4n.jpg")
 coconut.photo.attach(io: photo_coconut, filename: 'coconut.jpg', content_type: 'image/jpeg')
 
 pear = Product.create!(
@@ -310,7 +310,7 @@ pear = Product.create!(
   stock: 17,
   farmer_id: 2
 )
-photo_pear = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pear_sample_id.jpg")
+photo_pear = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947871/pear_sn2uc7.jpg")
 pear.photo.attach(io: photo_pear, filename: 'pear.jpg', content_type: 'image/jpeg')
 
 passion_fruit = Product.create!(
@@ -320,7 +320,7 @@ passion_fruit = Product.create!(
   stock: 12,
   farmer_id: 1
 )
-photo_passion_fruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/passion_fruit_sample_id.jpg")
+photo_passion_fruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947868/passion_fruit_l6zpig.jpg")
 passion_fruit.photo.attach(io: photo_passion_fruit, filename: 'passion_fruit.jpg', content_type: 'image/jpeg')
 
 zucchini = Product.create!(
@@ -330,7 +330,7 @@ zucchini = Product.create!(
   stock: 22,
   farmer_id: 2
 )
-photo_zucchini = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/zucchini_sample_id.jpg")
+photo_zucchini = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947888/zucchini_szvwwg.jpg")
 zucchini.photo.attach(io: photo_zucchini, filename: 'zucchini.jpg', content_type: 'image/jpeg')
 
 sweet_corn = Product.create!(
@@ -340,7 +340,7 @@ sweet_corn = Product.create!(
   stock: 19,
   farmer_id: 1
 )
-photo_sweet_corn = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/sweet_corn_sample_id.jpg")
+photo_sweet_corn = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750949046/sweet_corn_ajptwq.jpg")
 sweet_corn.photo.attach(io: photo_sweet_corn, filename: 'sweet_corn.jpg', content_type: 'image/jpeg')
 
 bell_pepper = Product.create!(
@@ -350,7 +350,7 @@ bell_pepper = Product.create!(
   stock: 18,
   farmer_id: 2
 )
-photo_bell_pepper = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/bell_pepper_sample_id.jpg")
+photo_bell_pepper = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947827/bell_pepper_z9ac4m.jpg")
 bell_pepper.photo.attach(io: photo_bell_pepper, filename: 'bell_pepper.jpg', content_type: 'image/jpeg')
 
 beetroot = Product.create!(
@@ -360,7 +360,7 @@ beetroot = Product.create!(
   stock: 16,
   farmer_id: 1
 )
-photo_beetroot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/beetroot_sample_id.jpg")
+photo_beetroot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947825/beetroot_mllung.jpg")
 beetroot.photo.attach(io: photo_beetroot, filename: 'beetroot.jpg', content_type: 'image/jpeg')
 
 broccoli = Product.create!(
@@ -370,7 +370,7 @@ broccoli = Product.create!(
   stock: 25,
   farmer_id: 2
 )
-photo_broccoli = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/broccoli_sample_id.jpg")
+photo_broccoli = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947830/broccoli_dv4mxz.jpg")
 broccoli.photo.attach(io: photo_broccoli, filename: 'broccoli.jpg', content_type: 'image/jpeg')
 
 green_beans = Product.create!(
@@ -380,7 +380,7 @@ green_beans = Product.create!(
   stock: 11,
   farmer_id: 1
 )
-photo_green_beans = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/green_beans_sample_id.jpg")
+photo_green_beans = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947849/green_beans_ctmviu.jpg")
 green_beans.photo.attach(io: photo_green_beans, filename: 'green_beans.jpg', content_type: 'image/jpeg')
 
 lettuce = Product.create!(
@@ -390,7 +390,7 @@ lettuce = Product.create!(
   stock: 9,
   farmer_id: 2
 )
-photo_lettuce = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/lettuce_sample_id.jpg")
+photo_lettuce = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947856/lettuce_buyjfc.jpg")
 lettuce.photo.attach(io: photo_lettuce, filename: 'lettuce.jpg', content_type: 'image/jpeg')
 
 eggplant = Product.create!(
@@ -400,7 +400,7 @@ eggplant = Product.create!(
   stock: 22,
   farmer_id: 1
 )
-photo_eggplant = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/eggplant_sample_id.jpg")
+photo_eggplant = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947845/eggplant_gsjyxv.jpg")
 eggplant.photo.attach(io: photo_eggplant, filename: 'eggplant.jpg', content_type: 'image/jpeg')
 
 cauliflower = Product.create!(
@@ -410,7 +410,7 @@ cauliflower = Product.create!(
   stock: 10,
   farmer_id: 2
 )
-photo_cauliflower = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/cauliflower_sample_id.jpg")
+photo_cauliflower = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750949252/cauliflower_t4h9he.jpg")
 cauliflower.photo.attach(io: photo_cauliflower, filename: 'cauliflower.jpg', content_type: 'image/jpeg')
 
 pumpkin = Product.create!(
@@ -420,7 +420,7 @@ pumpkin = Product.create!(
   stock: 21,
   farmer_id: 1
 )
-photo_pumpkin = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/pumpkin_sample_id.jpg")
+photo_pumpkin = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947879/pumpkin_umoz9n.jpg")
 pumpkin.photo.attach(io: photo_pumpkin, filename: 'pumpkin.jpg', content_type: 'image/jpeg')
 
 spinach = Product.create!(
@@ -430,7 +430,7 @@ spinach = Product.create!(
   stock: 24,
   farmer_id: 1
 )
-photo_spinach = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/spinach_sample_id.jpg")
+photo_spinach = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947882/spinach_tklu1l.jpg")
 spinach.photo.attach(io: photo_spinach, filename: 'spinach.jpg', content_type: 'image/jpeg')
 
 chili = Product.create!(
@@ -440,7 +440,7 @@ chili = Product.create!(
   stock: 16,
   farmer_id: 2
 )
-photo_chili = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/chili_sample_id.jpg")
+photo_chili = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947837/chili_mh3qus.jpg")
 chili.photo.attach(io: photo_chili, filename: 'chili.jpg', content_type: 'image/jpeg')
 
 cucumber = Product.create!(
@@ -450,7 +450,7 @@ cucumber = Product.create!(
   stock: 18,
   farmer_id: 1
 )
-photo_cucumber = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/cucumber_sample_id.jpg")
+photo_cucumber = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947842/cucumber_xvbxt2.jpg")
 cucumber.photo.attach(io: photo_cucumber, filename: 'cucumber.jpg', content_type: 'image/jpeg')
 
 garlic = Product.create!(
@@ -460,7 +460,7 @@ garlic = Product.create!(
   stock: 25,
   farmer_id: 2
 )
-photo_garlic = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750926464/garlic_sample_id.jpg")
+photo_garlic = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947848/garlic_q3qj7s.jpg")
 garlic.photo.attach(io: photo_garlic, filename: 'garlic.jpg', content_type: 'image/jpeg')
 
 puts "#{Product.count} Products created."
