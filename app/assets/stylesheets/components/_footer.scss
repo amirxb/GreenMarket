@@ -66,11 +66,12 @@
 }
 
 .social-icons i {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: color 0.3s ease;
 }
 
 .social-icons i:hover {
   color: #f0f4dc;
-  font-size: 1.5rem;
+  transform: scale(1.2);
+  transition: all 125ms ease-in-out;
 }
