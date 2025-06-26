@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "farmer_show";
 
 .farmers-page {
   display: flex;
@@ -10,8 +11,12 @@
 
 .top-row {
   display: flex;
-  align-items: flex-end;
-  padding: 30px 40px;
+  flex: none;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding-bottom: 20px;
 }
 
 .title-section {
@@ -46,20 +51,25 @@
 
 .farmers-section {
   flex: 1;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
   padding: 40px;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  height: 100%;
 }
 
 
 
 .farmers-layout {
+  flex: 1;
+  overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  padding-top: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .farmer-card-link {

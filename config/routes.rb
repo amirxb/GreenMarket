@@ -37,5 +37,10 @@ Rails.application.routes.draw do
 
   resources :cart_items, only: [:create, :update, :destroy]
 
+  resources :cart_items do
+    patch 'update_quantity', on: :member
+  end
+
+
   resources :orders, only: [:new, :create, :show]
 end
