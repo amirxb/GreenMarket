@@ -9,8 +9,8 @@
 .login {
 display: flex;
 justify-content: center;
-align-items: flex-start;
-height: 100vh;
+align-items: center;
+height: 80vh;
 }
 
 .login-box {
@@ -18,9 +18,9 @@ margin-top: 10px;
 background: white;
 padding:30px;
 width: 300px;
-border-radius: 10px;
-border: 2px solid rgb(172, 173, 173);
-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+border-radius: 1.5rem;
+border: 1px solid #e0e0e0;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -31,7 +31,6 @@ h2 {
 
 .form-actions {
 margin-bottom: 10px;
-background-color: #90A955;
 text-align: center;
 color: white;
 text-decoration: none;
@@ -42,14 +41,23 @@ text-decoration: none;
   color: black;
 }
 
+.btn {
+  width: 238px;
+  background-color: #3A5A40 !important;
+}
+
 .sign-up-button{
-  background-color:#90A955;
-  width: 3cm;
-  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  background-color:#3A5A40;
+  width: 170px;
+  padding: 10px 20px;
   text-decoration: none;
-  color:black;
-  border-radius: 2px;
-  display: inline-block;
+  color:white;
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0 auto;
 }
 
 
@@ -62,15 +70,6 @@ background-color: #cfe1b9;
 padding: 20px;
 }
 
-.sign-up-box{
-margin-top: 10px;
-background: white;
-padding:30px;
-width: 300px;
-border-radius: 10px;
-border: 2px solid rgb(172, 173, 173);
-box-shadow: 10px 10px 10px rgba(38, 32, 32, 0.3);
-}
 
 
 // .password {
@@ -84,7 +83,7 @@ box-shadow: 10px 10px 10px rgba(38, 32, 32, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
-  //height: 100vh; // full height of the screen
+  height: 65vh; // full height of the screen
 }
 
 .forgot-box {
@@ -95,9 +94,9 @@ margin-top: 10px;
 background: white;
 padding:30px;
 width: 300px;
-border-radius: 10px;
-border: 2px solid rgb(172, 173, 173);
-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+border-radius: 1.5rem;
+border: 1px solid #e0e0e0;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -109,15 +108,17 @@ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px 20px;
-  background-color: #cfe1b9;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  font-family: "Afacad", sans-serif;
 }
 
 .sign-up-box {
-  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 40px 30px;
   width: 100%;
-  max-width: 700px;
-  border-radius: 50px;
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
 }
