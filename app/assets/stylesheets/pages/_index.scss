@@ -66,6 +66,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding-top: 10px;
+  padding-bottom: 5px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -83,21 +84,62 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
   border: 1px solid #e0e0e0;
-  min-height: 250px;
+  height: 380px;
   min-width: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .farmer-card:hover {
   transform: translateY(-4px);
 }
 
+.farmer-image-container {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #f5f5f5;
+}
+
+.farmer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+.farmer-card:hover .farmer-image {
+  transform: scale(1.05);
+}
+
+.farmer-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  border-radius: 1rem;
+  color: #999;
+  font-size: 2rem;
+}
+
+.farmer-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
 .farmer-name {
   color: #000000;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 
