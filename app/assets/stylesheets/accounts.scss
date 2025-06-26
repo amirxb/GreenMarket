@@ -101,13 +101,14 @@
 
 //////edit account/////
 .account-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1.5rem;
+  border: 1px solid #e0e0e0;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad", sans-serif;
 }
 
   h1 {
@@ -115,7 +116,7 @@
     color: #000000;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
   }
 
   .account-form {

@@ -20,11 +20,9 @@
                 <td><%= item.product.name %></td>
                   <td>
                     <div class="quantity-buttons">
-                      <% unless item.quantity <= 1 %>
                         <%= button_to update_quantity_cart_item_path(item, quantity: item.quantity - 1), method: :patch, class: "qty-btn", form_class: "inline-form" do %>
                           <i class="fa-solid fa-minus"></i>
                         <% end %>
-                      <% end %>
 
                       <span class="quantity-number"><%= item.quantity %></span>
 
@@ -37,9 +35,9 @@
                 <td>Rs <%= number_with_precision(item.product.price * item.quantity, precision: 2) %></td>
                 <td>
                   <%= simple_form_for item, url: cart_item_path(item), method: :delete, html: { local: true } do |f| %>
-                    <%= f.button :submit, class: "btn-sm btn-danger", title: "Remove item" do %>
+                    <button type="submit" class="btn-sm btn-danger" title="Remove item">
                       <i class="fa-solid fa-trash"></i>
-                    <% end %>
+                    </button>
                   <% end %>
                 </td>
               </tr>
