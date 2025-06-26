@@ -1,52 +1,75 @@
-// Footer Styles
 .footer {
   background-color: #3A5A40;
   color: #f0f4dc;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 2rem 40px;
   margin-top: auto;
+  font-size: 0.95rem;
 }
 
 .footer-container {
-  max-width: 1200px;
-  padding: 0 3rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .footer-section {
-  h4 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    color: #f0f4dc;
-  }
-
-  p {
-    color: #d0d0d0;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-
-  a {
-    color: #d0d0d0;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #f0f4dc;
-    }
-  }
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+///Brand ///
+.brand h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #f0f4dc;
+}
 
+///Copyright///
+.footer-section .copyright p {
+  color: #d0d0d0;
+  font-size: 0.85rem;
+  padding-top: 75px;
+  margin: 0;
+}
+
+///Contact///
+.contact h5 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.contact a {
+  color: #d0d0d0;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #f0f4dc;
+}
+
+///social icons///
 .social-icons {
+  margin-top: 0.6rem;
   display: flex;
   gap: 15px;
+  color: #d0d0d0;
+  padding-top: 20px;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #f0f4dc;
 }
