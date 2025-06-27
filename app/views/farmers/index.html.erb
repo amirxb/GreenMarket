@@ -6,7 +6,9 @@
         <h1 class="page-title">Our Farmers</h1>
         <p class="page-subtitle">
           <% if params[:search].present? %>
-            Location: "<%= params[:search] %>"
+            Results for: "<%= params[:search] %>"
+          <% elsif params[:region].present? %>
+            Results for: "<%= params[:region] %>"
           <% else %>
             "All Locations"
           <% end %>
@@ -25,7 +27,18 @@
         <% end %>
       </div>
     </div>
+    <div>
+      <%= link_to "All locations", farmers_path, class: "btn btn-location" %>
+      <%= link_to "Centre", "#{farmers_path}?region=centre", class: "btn btn-location" %>
+      <%= link_to "North", "#{farmers_path}?region=north", class: "btn btn-location" %>
+      <%= link_to "South", "#{farmers_path}?region=south", class: "btn btn-location" %>
+      <%= link_to "East", "#{farmers_path}?region=east", class: "btn btn-location" %>
+      <%= link_to "West", "#{farmers_path}?region=west", class: "btn btn-location" %>
 
+
+
+
+    </div>
       <div class="farmers-layout">
         <% @farmers.each do |farmer| %>
           <%= link_to farmer_path(farmer), class: "farmer-card-link" do %>
