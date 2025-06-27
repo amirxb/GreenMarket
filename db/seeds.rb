@@ -225,6 +225,7 @@ lychee = Product.create!(
 )
 photo_lychee = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947859/lychee_rd9gdq.jpg")
 lychee.photo.attach(io: photo_lychee, filename: 'lychee.jpg', content_type: 'image/jpeg')
+
 puts "Created item #{lychee.name} with id #{lychee.id} for farmer #{lychee.farmer.name}"
 
 pineapple = Product.create!(
@@ -308,6 +309,8 @@ guava = Product.create!(
 )
 photo_guava = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947852/guava_ivonqj.jpg")
 guava.photo.attach(io: photo_guava, filename: 'guava.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{guava.name} with id #{guava.id} for farmer #{guava.farmer.name}"
 
 apple = Product.create!(
   name: "Apple",
@@ -415,6 +418,8 @@ broccoli = Product.create!(
 photo_broccoli = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947830/broccoli_dv4mxz.jpg")
 broccoli.photo.attach(io: photo_broccoli, filename: 'broccoli.jpg', content_type: 'image/jpeg')
 
+puts "Created item #{broccoli.name} with id #{broccoli.id} for farmer #{broccoli.farmer.name}"
+
 green_beans = Product.create!(
   name: "Green Beans",
   description: "Tender and snappy, green beans work well in sautés or stews.",
@@ -424,6 +429,8 @@ green_beans = Product.create!(
 )
 photo_green_beans = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947849/green_beans_ctmviu.jpg")
 green_beans.photo.attach(io: photo_green_beans, filename: 'green_beans.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{green_beans.name} with id #{green_beans.id} for farmer #{green_beans.farmer.name}"
 
 lettuce = Product.create!(
   name: "Lettuce",
@@ -435,6 +442,8 @@ lettuce = Product.create!(
 photo_lettuce = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947856/lettuce_buyjfc.jpg")
 lettuce.photo.attach(io: photo_lettuce, filename: 'lettuce.jpg', content_type: 'image/jpeg')
 
+puts "Created item #{lettuce.name} with id #{lettuce.id} for farmer #{lettuce.farmer.name}"
+
 eggplant = Product.create!(
   name: "Eggplant",
   description: "Velvety and versatile, eggplant is ideal for curries, grilling, or moussaka.",
@@ -444,6 +453,8 @@ eggplant = Product.create!(
 )
 photo_eggplant = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947845/eggplant_gsjyxv.jpg")
 eggplant.photo.attach(io: photo_eggplant, filename: 'eggplant.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{eggplant.name} with id #{eggplant.id} for farmer #{eggplant.farmer.name}"
 
 cauliflower = Product.create!(
   name: "Cauliflower",
@@ -455,6 +466,8 @@ cauliflower = Product.create!(
 photo_cauliflower = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750949252/cauliflower_t4h9he.jpg")
 cauliflower.photo.attach(io: photo_cauliflower, filename: 'cauliflower.jpg', content_type: 'image/jpeg')
 
+puts "Created item #{cauliflower.name} with id #{cauliflower.id} for farmer #{cauliflower.farmer.name}"
+
 pumpkin = Product.create!(
   name: "Pumpkin",
   description: "Naturally sweet and earthy, pumpkin shines in soups, pies, and curries.",
@@ -464,6 +477,8 @@ pumpkin = Product.create!(
 )
 photo_pumpkin = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947879/pumpkin_umoz9n.jpg")
 pumpkin.photo.attach(io: photo_pumpkin, filename: 'pumpkin.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{pumpkin.name} with id #{pumpkin.id} for farmer #{pumpkin.farmer.name}"
 
 spinach = Product.create!(
   name: "Spinach",
@@ -475,6 +490,8 @@ spinach = Product.create!(
 photo_spinach = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947882/spinach_tklu1l.jpg")
 spinach.photo.attach(io: photo_spinach, filename: 'spinach.jpg', content_type: 'image/jpeg')
 
+puts "Created item #{spinach.name} with id #{spinach.id} for farmer #{spinach.farmer.name}"
+
 chili = Product.create!(
   name: "Chili",
   description: "Hot and punchy, these chilies bring heat to any dish.",
@@ -484,6 +501,8 @@ chili = Product.create!(
 )
 photo_chili = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947837/chili_mh3qus.jpg")
 chili.photo.attach(io: photo_chili, filename: 'chili.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{chili.name} with id #{chili.id} for farmer #{chili.farmer.name}"
 
 cucumber = Product.create!(
   name: "Cucumber",
@@ -495,6 +514,8 @@ cucumber = Product.create!(
 photo_cucumber = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947842/cucumber_xvbxt2.jpg")
 cucumber.photo.attach(io: photo_cucumber, filename: 'cucumber.jpg', content_type: 'image/jpeg')
 
+puts "Created item #{cucumber.name} with id #{cucumber.id} for farmer #{cucumber.farmer.name}"
+
 garlic = Product.create!(
   name: "Garlic",
   description: "Aromatic and essential, garlic brings bold flavor to every cuisine.",
@@ -504,6 +525,8 @@ garlic = Product.create!(
 )
 photo_garlic = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947848/garlic_q3qj7s.jpg")
 garlic.photo.attach(io: photo_garlic, filename: 'garlic.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{garlic.name} with id #{garlic.id} for farmer #{garlic.farmer.name}"
 
 
 puts "#{Product.count} Products created."
