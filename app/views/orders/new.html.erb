@@ -1,7 +1,7 @@
 <div class="payment-box">
   <% if @order.errors.any? %>
     <div class="alert alert-danger">
-      <h4>There were issues with your payment:</h4>
+      <h4>There are issues with your payment:</h4>
       <ul>
         <% @order.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
