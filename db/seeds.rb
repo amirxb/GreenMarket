@@ -12,8 +12,8 @@ require "open-uri"
 puts "Cleaning database..."
 Product.destroy_all
 Farmer.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('products')
-ActiveRecord::Base.connection.reset_pk_sequence!('farmers')
+# ActiveRecord::Base.connection.reset_pk_sequence!('products')
+# ActiveRecord::Base.connection.reset_pk_sequence!('farmers')
 
 
 puts "Creating farmers..."
@@ -143,142 +143,168 @@ puts "#{Farmer.count} Farmers created."
 
 
 puts "Creating products..."
+puts "Creating products for farmers..."
 banana = Product.create!(
   name: "Banana",
   description: "Grown in lush valleys, these bananas are naturally sweet and perfect for smoothies, snacking, or baking.",
   price: "12.00",
   stock: 10,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_banana = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947823/banana_cvx4fk.jpg")
 banana.photo.attach(io: photo_banana, filename: 'banana.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{banana.name} with id #{banana.id} for farmer #{banana.farmer.name}"
 
 cabbage = Product.create!(
   name: "Cabbage",
   description: "A crisp, leafy vegetable ideal for stir-fries, pickling, or a crunchy salad base.",
   price: "32.00",
   stock: 10,
-  farmer_id: 2
+  farmer: asha
 )
 photo_cabbage = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947832/cabbage_ulj5lz.jpg")
 cabbage.photo.attach(io: photo_cabbage, filename: 'cabbage.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{cabbage.name} with id #{cabbage.id} for farmer #{cabbage.farmer.name}"
 
 strawberry = Product.create!(
   name: "Strawberry",
   description: "Vibrant red strawberries harvested at peak ripeness, great for desserts or a fresh snack.",
   price: "25.00",
   stock: 10,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_strawberry = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947885/strawberry_e0yied.jpg")
 strawberry.photo.attach(io: photo_strawberry, filename: 'strawberry.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{strawberry.name} with id #{strawberry.id} for farmer #{strawberry.farmer.name}"
 
 carrot = Product.create!(
   name: "Carrot",
   description: "Sweet and crunchy, these carrots are packed with beta-carotene and farm-fresh flavor.",
   price: "17.00",
   stock: 10,
-  farmer_id: 2
+  farmer: asha
 )
 photo_carrot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947834/carrot_gupbeq.jpg")
 carrot.photo.attach(io: photo_carrot, filename: 'carrot.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{carrot.name} with id #{carrot.id} for farmer #{carrot.farmer.name}"
 
 mango = Product.create!(
   name: "Mango",
   description: "Tropical and juicy, perfect for eating fresh, blending into lassis, or making chutneys.",
   price: "12.50",
   stock: 10,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_mango = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947861/mango_sadpqh.jpg")
 mango.photo.attach(io: photo_mango, filename: 'mango.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{mango.name} with id #{mango.id} for farmer #{mango.farmer.name}"
 
 lemon = Product.create!(
   name: "Lemon",
   description: "Zesty and tangy, these lemons add brightness to any dish or drink.",
   price: "27.23",
   stock: 12,
-  farmer_id: 2
+  farmer: asha
 )
 photo_lemon = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947854/lemon_cryg0n.jpg")
 lemon.photo.attach(io: photo_lemon, filename: 'lemon.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{lemon.name} with id #{lemon.id} for farmer #{lemon.farmer.name}"
 
 lychee = Product.create!(
   name: "Lychee",
   description: "Sweet, floral lychees that are perfect for snacking or pairing with desserts.",
   price: "25.00",
   stock: 18,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_lychee = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947859/lychee_rd9gdq.jpg")
 lychee.photo.attach(io: photo_lychee, filename: 'lychee.jpg', content_type: 'image/jpeg')
+puts "Created item #{lychee.name} with id #{lychee.id} for farmer #{lychee.farmer.name}"
 
 pineapple = Product.create!(
   name: "Pineapple",
   description: "Golden and juicy, this pineapple brings tropical flavor to your table.",
   price: "13.39",
   stock: 19,
-  farmer_id: 2
+  farmer: asha
 )
 photo_pineapple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947877/pineapple_kllxxs.jpg")
 pineapple.photo.attach(io: photo_pineapple, filename: 'pineapple.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{pineapple.name} with id #{pineapple.id} for farmer #{pineapple.farmer.name}"
 
 starfruit = Product.create!(
   name: "Starfruit",
   description: "With its unique shape and tangy taste, starfruit adds flair to your fruit bowls.",
   price: "13.07",
   stock: 8,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_starfruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947883/starfruit_yflwie.jpg")
 starfruit.photo.attach(io: photo_starfruit, filename: 'starfruit.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{starfruit.name} with id #{starfruit.id} for farmer #{starfruit.farmer.name}"
 
 orange = Product.create!(
   name: "Orange",
   description: "Citrusy and sweet, these oranges are full of vitamin C and great for juicing.",
   price: "34.51",
   stock: 18,
-  farmer_id: 2
+  farmer: asha
 )
 photo_orange = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947867/orange_tsgt39.jpg")
 orange.photo.attach(io: photo_orange, filename: 'orange.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{orange.name} with id #{orange.id} for farmer #{orange.farmer.name}"
 
 pomegranate = Product.create!(
   name: "Pomegranate",
   description: "Bursting with ruby-red seeds, perfect for antioxidants and fresh taste.",
   price: "31.09",
   stock: 11,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_pomegranate = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947876/pomegranate_vwbo2n.jpg")
 pomegranate.photo.attach(io: photo_pomegranate, filename: 'pomegranate.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{pomegranate.name} with id #{pomegranate.id} for farmer #{pomegranate.farmer.name}"
 
 avocado = Product.create!(
   name: "Avocado",
   description: "Creamy and rich, avocados are perfect for toast, salads, or guacamole.",
   price: "17.39",
   stock: 8,
-  farmer_id: 2
+  farmer: asha
 )
 photo_avocado = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947822/avocado_rtgov5.jpg")
 avocado.photo.attach(io: photo_avocado, filename: 'avocado.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{avocado.name} with id #{avocado.id} for farmer #{avocado.farmer.name}"
 
 papaya = Product.create!(
   name: "Papaya",
   description: "Soft, sweet papayas ideal for breakfast bowls or smoothies.",
   price: "28.58",
   stock: 18,
-  farmer_id: 2
+  farmer: asha
 )
 photo_papaya = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947865/papaya_ounn5g.jpg")
 papaya.photo.attach(io: photo_papaya, filename: 'papaya.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{papaya.name} with id #{papaya.id} for farmer #{papaya.farmer.name}"
 
 guava = Product.create!(
   name: "Guava",
   description: "A fragrant fruit with a tropical punch, guava is great eaten fresh or juiced.",
   price: "39.84",
   stock: 11,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_guava = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947852/guava_ivonqj.jpg")
 guava.photo.attach(io: photo_guava, filename: 'guava.jpg', content_type: 'image/jpeg')
@@ -288,87 +314,103 @@ apple = Product.create!(
   description: "Crunchy and refreshing, apples make a perfect healthy snack on the go.",
   price: "26.84",
   stock: 21,
-  farmer_id: 2
+  farmer: asha
 )
 photo_apple = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947820/apple_dzxbmk.jpg")
 apple.photo.attach(io: photo_apple, filename: 'apple.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{apple.name} with id #{apple.id} for farmer #{apple.farmer.name}"
 
 coconut = Product.create!(
   name: "Coconut",
   description: "Naturally hydrating with creamy flesh, coconuts are a tropical staple.",
   price: "37.93",
   stock: 18,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_coconut = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947843/coconut_xqxi4n.jpg")
 coconut.photo.attach(io: photo_coconut, filename: 'coconut.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{coconut.name} with id #{coconut.id} for farmer #{coconut.farmer.name}"
 
 pear = Product.create!(
   name: "Pear",
   description: "Juicy and smooth, pears pair well with cheese or as a standalone dessert.",
   price: "34.86",
   stock: 17,
-  farmer_id: 2
+  farmer: asha
 )
 photo_pear = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947871/pear_sn2uc7.jpg")
 pear.photo.attach(io: photo_pear, filename: 'pear.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{pear.name} with id #{pear.id} for farmer #{pear.farmer.name}"
 
 passion_fruit = Product.create!(
   name: "Passion Fruit",
   description: "Tart and aromatic, passion fruit enhances drinks, desserts, or yoghurts.",
   price: "23.85",
   stock: 12,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_passion_fruit = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947868/passion_fruit_l6zpig.jpg")
 passion_fruit.photo.attach(io: photo_passion_fruit, filename: 'passion_fruit.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{passion_fruit.name} with id #{passion_fruit.id} for farmer #{passion_fruit.farmer.name}"
 
 zucchini = Product.create!(
   name: "Zucchini",
   description: "Mild and tender, zucchini is great grilled, sautéed, or spiralized.",
   price: "15.99",
   stock: 22,
-  farmer_id: 2
+  farmer: asha
 )
 photo_zucchini = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947888/zucchini_szvwwg.jpg")
 zucchini.photo.attach(io: photo_zucchini, filename: 'zucchini.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{zucchini.name} with id #{zucchini.id} for farmer #{zucchini.farmer.name}"
 
 sweet_corn = Product.create!(
   name: "Sweet Corn",
   description: "Golden kernels of sweetness, great on the cob or in hearty stews.",
   price: "15.36",
   stock: 19,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_sweet_corn = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750949046/sweet_corn_ajptwq.jpg")
 sweet_corn.photo.attach(io: photo_sweet_corn, filename: 'sweet_corn.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{sweet_corn.name} with id #{sweet_corn.id} for farmer #{sweet_corn.farmer.name}"
 
 bell_pepper = Product.create!(
   name: "Bell Pepper",
   description: "Colorful and crisp, these peppers add crunch and color to any meal.",
   price: "37.41",
   stock: 18,
-  farmer_id: 2
+  farmer: asha
 )
 photo_bell_pepper = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947827/bell_pepper_z9ac4m.jpg")
 bell_pepper.photo.attach(io: photo_bell_pepper, filename: 'bell_pepper.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{bell_pepper.name} with id #{bell_pepper.id} for farmer #{bell_pepper.farmer.name}"
 
 beetroot = Product.create!(
   name: "Beetroot",
   description: "Earthy and nutrient-rich, beetroot is great roasted or pickled.",
   price: "16.81",
   stock: 16,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_beetroot = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947825/beetroot_mllung.jpg")
 beetroot.photo.attach(io: photo_beetroot, filename: 'beetroot.jpg', content_type: 'image/jpeg')
+
+puts "Created item #{beetroot.name} with id #{beetroot.id} for farmer #{beetroot.farmer.name}"
 
 broccoli = Product.create!(
   name: "Broccoli",
   description: "Packed with vitamins, broccoli is great steamed, stir-fried, or raw.",
   price: "14.32",
   stock: 25,
-  farmer_id: 2
+  farmer: asha
 )
 photo_broccoli = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947830/broccoli_dv4mxz.jpg")
 broccoli.photo.attach(io: photo_broccoli, filename: 'broccoli.jpg', content_type: 'image/jpeg')
@@ -378,7 +420,7 @@ green_beans = Product.create!(
   description: "Tender and snappy, green beans work well in sautés or stews.",
   price: "14.56",
   stock: 11,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_green_beans = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947849/green_beans_ctmviu.jpg")
 green_beans.photo.attach(io: photo_green_beans, filename: 'green_beans.jpg', content_type: 'image/jpeg')
@@ -388,7 +430,7 @@ lettuce = Product.create!(
   description: "Light and refreshing, perfect as the base for your favorite salads.",
   price: "21.65",
   stock: 9,
-  farmer_id: 2
+  farmer: asha
 )
 photo_lettuce = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947856/lettuce_buyjfc.jpg")
 lettuce.photo.attach(io: photo_lettuce, filename: 'lettuce.jpg', content_type: 'image/jpeg')
@@ -398,7 +440,7 @@ eggplant = Product.create!(
   description: "Velvety and versatile, eggplant is ideal for curries, grilling, or moussaka.",
   price: "10.63",
   stock: 22,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_eggplant = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947845/eggplant_gsjyxv.jpg")
 eggplant.photo.attach(io: photo_eggplant, filename: 'eggplant.jpg', content_type: 'image/jpeg')
@@ -408,7 +450,7 @@ cauliflower = Product.create!(
   description: "Fluffy florets great for roasting, mashing, or low-carb meals.",
   price: "15.68",
   stock: 10,
-  farmer_id: 2
+  farmer: asha
 )
 photo_cauliflower = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750949252/cauliflower_t4h9he.jpg")
 cauliflower.photo.attach(io: photo_cauliflower, filename: 'cauliflower.jpg', content_type: 'image/jpeg')
@@ -418,7 +460,7 @@ pumpkin = Product.create!(
   description: "Naturally sweet and earthy, pumpkin shines in soups, pies, and curries.",
   price: "16.75",
   stock: 21,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_pumpkin = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947879/pumpkin_umoz9n.jpg")
 pumpkin.photo.attach(io: photo_pumpkin, filename: 'pumpkin.jpg', content_type: 'image/jpeg')
@@ -428,7 +470,7 @@ spinach = Product.create!(
   description: "Tender leaves packed with iron, perfect for salads or sautéed sides.",
   price: "39.37",
   stock: 24,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_spinach = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947882/spinach_tklu1l.jpg")
 spinach.photo.attach(io: photo_spinach, filename: 'spinach.jpg', content_type: 'image/jpeg')
@@ -438,7 +480,7 @@ chili = Product.create!(
   description: "Hot and punchy, these chilies bring heat to any dish.",
   price: "38.24",
   stock: 16,
-  farmer_id: 2
+  farmer: asha
 )
 photo_chili = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947837/chili_mh3qus.jpg")
 chili.photo.attach(io: photo_chili, filename: 'chili.jpg', content_type: 'image/jpeg')
@@ -448,7 +490,7 @@ cucumber = Product.create!(
   description: "Cool and crunchy, cucumbers are refreshing raw or in pickles.",
   price: "29.84",
   stock: 18,
-  farmer_id: 1
+  farmer: ravi
 )
 photo_cucumber = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947842/cucumber_xvbxt2.jpg")
 cucumber.photo.attach(io: photo_cucumber, filename: 'cucumber.jpg', content_type: 'image/jpeg')
@@ -458,9 +500,10 @@ garlic = Product.create!(
   description: "Aromatic and essential, garlic brings bold flavor to every cuisine.",
   price: "38.58",
   stock: 25,
-  farmer_id: 2
+  farmer: asha
 )
 photo_garlic = URI.open("https://res.cloudinary.com/draltripq/image/upload/v1750947848/garlic_q3qj7s.jpg")
 garlic.photo.attach(io: photo_garlic, filename: 'garlic.jpg', content_type: 'image/jpeg')
+
 
 puts "#{Product.count} Products created."
