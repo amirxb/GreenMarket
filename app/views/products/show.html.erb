@@ -13,7 +13,7 @@
 
       <div class="product-details">
         <p><strong>Description:</strong> <%= @product.description %></p>
-        <p><strong>Price:</strong> Rs <%= @product.price %></p>
+        <p><strong>Price:</strong> Rs <%= number_with_precision (@product.price), precision: 2 %></p>
       </div>
 
       <div class="product-actions">
