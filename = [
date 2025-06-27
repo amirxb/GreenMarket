@@ -1,0 +1,146 @@
+=> 
+[{[33m:[0m[33mname[0m=>[31m[1m"[0m[31mRavi[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mMU, Ave Rosier, Amaury 31401[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mnorth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mPassionate about sustainable farming, Ravi brings fresh vegetables straight from his fields in Belle Vue every morning.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5792 1010[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mAsha[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mRoyal Road Plaine Des Roches Riviere Du Rempart MU, 31902[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31meast[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mKnown for her organic herbs and leafy greens, Asha is a trusted grower from Saint Pierre with a love for clean, healthy food.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5785 3093[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mMoha[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mVPP9+62G, Shantineketan MU, Road, Roches Noires 31207[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mnorth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mBased in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5726 3238[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mRani[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mMare La Chaux, Post de Flacq MU, 31203[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31meast[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mRani offers freshly picked guavas and jackfruits, grown without any harmful chemicals.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5834 1122[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mDev[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mVacoas MU, Plaines Wilhems 74208[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mcentre[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mDev is known for cultivating high-quality carrots and radishes, supplying nearby villages weekly.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5943 2211[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mFarah[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mBambous MU, Black River 90203[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mwest[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mFarah specializes in growing fresh coriander, mint, and other herbs using hydroponics.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5922 8890[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mYash[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mSebastopol, Central Flacq 31301[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31meast[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mYash runs a family farm producing organic tomatoes and capsicum for the local market.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5899 4455[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mCeline[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mUnion Vale, Grand Port 60302[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31msouth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mCeline supplies farm-fresh eggs and seasonal vegetables to nearby schools and households.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5748 6677[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mVikash[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mChamarel, Black River 90402[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mwest[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mVikash cultivates exotic mushrooms and wild herbs in the highland regions of Chamarel.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5863 9900[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mAmina[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mTriolet, MU 21301[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mnorth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mAmina grows chillies, eggplants, and okra using sustainable and water-efficient methods.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5988 7654[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mNita[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mValetta Road, Moka MU, 80808[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mcentre[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mNita is a dedicated horticulturist from Moka who specializes in cultivating organic vegetables with care and precision.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5768 2041[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mJay[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mRoute Royale, La Laura-Malenga MU, 81402[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mcentre[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mJay is a second-generation farmer known for his flavorful fruits and traditional farming methods.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5802 9173[0m[31m[1m"[0m}]
+=> 
+[{[33m:[0m[33mname[0m=>[31m[1m"[0m[31mRavi[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mMU, Ave Rosier, Amaury 31401[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mnorth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mPassionate about sustainable farming, Ravi brings fresh vegetables straight from his fields in Belle Vue every morning.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5792 1010[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mAsha[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mRoyal Road Plaine Des Roches Riviere Du Rempart MU, 31902[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31meast[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mKnown for her organic herbs and leafy greens, Asha is a trusted grower from Saint Pierre with a love for clean, healthy food.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5785 3093[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mMoha[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mVPP9+62G, Shantineketan MU, Road, Roches Noires 31207[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mnorth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mBased in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5726 3238[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mRani[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mMare La Chaux, Post de Flacq MU, 31203[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31meast[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mRani offers freshly picked guavas and jackfruits, grown without any harmful chemicals.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5834 1122[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mDev[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mVacoas MU, Plaines Wilhems 74208[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mcentre[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mDev is known for cultivating high-quality carrots and radishes, supplying nearby villages weekly.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5943 2211[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mFarah[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mBambous MU, Black River 90203[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mwest[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mFarah specializes in growing fresh coriander, mint, and other herbs using hydroponics.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5922 8890[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mYash[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mSebastopol, Central Flacq 31301[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31meast[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mYash runs a family farm producing organic tomatoes and capsicum for the local market.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5899 4455[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mCeline[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mUnion Vale, Grand Port 60302[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31msouth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mCeline supplies farm-fresh eggs and seasonal vegetables to nearby schools and households.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5748 6677[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mVikash[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mChamarel, Black River 90402[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mwest[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mVikash cultivates exotic mushrooms and wild herbs in the highland regions of Chamarel.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5863 9900[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mAmina[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mTriolet, MU 21301[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mnorth[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mAmina grows chillies, eggplants, and okra using sustainable and water-efficient methods.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5988 7654[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mNita[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mValetta Road, Moka MU, 80808[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mcentre[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mNita is a dedicated horticulturist from Moka who specializes in cultivating organic vegetables with care and precision.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5768 2041[0m[31m[1m"[0m},
+ {[33m:[0m[33mname[0m=>[31m[1m"[0m[31mJay[0m[31m[1m"[0m,
+  [33m:[0m[33mlocation[0m=>[31m[1m"[0m[31mRoute Royale, La Laura-Malenga MU, 81402[0m[31m[1m"[0m,
+  [33m:[0m[33mregion[0m=>[31m[1m"[0m[31mcentre[0m[31m[1m"[0m,
+  [33m:[0m[33mdescription[0m=>
+   [31m[1m"[0m[31mJay is a second-generation farmer known for his flavorful fruits and traditional farming methods.[0m[31m[1m"[0m,
+  [33m:[0m[33mcontact_info[0m=>[31m[1m"[0m[31m5802 9173[0m[31m[1m"[0m}]
