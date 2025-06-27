@@ -22,6 +22,7 @@ puts "Creating farmers..."
 ravi = Farmer.create!(
   name: "Ravi",
   location: "MU, Ave Rosier, Amaury 31401",
+  region: "north",
   description: "Passionate about sustainable farming, Ravi brings fresh vegetables straight from his fields in Belle Vue every morning.",
   contact_info: "5792 1010"
 )
@@ -33,6 +34,7 @@ ravi.image.attach(io: photo_ravi, filename: 'ravi.jpg', content_type: 'image/jpe
 asha = Farmer.create!(
   name: "Asha",
   location: "Royal Road Plaine Des Roches Riviere Du Rempart MU, 31902",
+  region: "east",
   description: "Known for her organic herbs and leafy greens, Asha is a trusted grower from Saint Pierre with a love for clean, healthy food.",
   contact_info: "5785 3093"
 )
@@ -43,6 +45,7 @@ asha.image.attach(io: photo_asha, filename: 'asha.jpg', content_type: 'image/jpe
 moha = Farmer.create!(
   name: "Moha",
   location: "VPP9+62G, Shantineketan MU, Road, Roches Noires 31207",
+  region: "north",
   description: "Based in Flacq, Moha grows bananas, pineapples, and more. His produce is loved for its sweetness and natural ripeness.",
   contact_info: "5726 3238"
 )
@@ -53,6 +56,7 @@ moha.image.attach(io: photo_moha, filename: 'moha.jpg', content_type: 'image/jpe
 rani = Farmer.create!(
   name: "Rani",
   location: "Mare La Chaux, Post de Flacq MU, 31203",
+  region: "east",
   description: "Rani offers freshly picked guavas and jackfruits, grown without any harmful chemicals.",
   contact_info: "5834 1122"
 )
@@ -63,6 +67,7 @@ rani.image.attach(io: photo_rani, filename: 'rani.jpg', content_type: 'image/jpe
 dev = Farmer.create!(
   name: "Dev",
   location: "Vacoas MU, Plaines Wilhems 74208",
+  region: "centre",
   description: "Dev is known for cultivating high-quality carrots and radishes, supplying nearby villages weekly.",
   contact_info: "5943 2211"
 )
@@ -73,6 +78,7 @@ dev.image.attach(io: photo_dev, filename: 'dev.jpg', content_type: 'image/jpeg')
 farah = Farmer.create!(
   name: "Farah",
   location: "Bambous MU, Black River 90203",
+  region: "west",
   description: "Farah specializes in growing fresh coriander, mint, and other herbs using hydroponics.",
   contact_info: "5922 8890"
 )
@@ -83,6 +89,7 @@ farah.image.attach(io: photo_farah, filename: 'farah.jpg', content_type: 'image/
 yash = Farmer.create!(
   name: "Yash",
   location: "Sebastopol, Central Flacq 31301",
+  region: "east",
   description: "Yash runs a family farm producing organic tomatoes and capsicum for the local market.",
   contact_info: "5899 4455"
 )
@@ -93,6 +100,7 @@ yash.image.attach(io: photo_yash, filename: 'yash.jpg', content_type: 'image/jpe
 pooja = Farmer.create!(
   name: "Celine",
   location: "Union Vale, Grand Port 60302",
+  region: "south",
   description: "Celine supplies farm-fresh eggs and seasonal vegetables to nearby schools and households.",
   contact_info: "5748 6677"
 )
@@ -103,6 +111,7 @@ pooja.image.attach(io: photo_pooja, filename: 'pooja.jpg', content_type: 'image/
 vikash = Farmer.create!(
   name: "Vikash",
   location: "Chamarel, Black River 90402",
+  region: "west",
   description: "Vikash cultivates exotic mushrooms and wild herbs in the highland regions of Chamarel.",
   contact_info: "5863 9900"
 )
@@ -113,6 +122,7 @@ vikash.image.attach(io: photo_vikash, filename: 'vikash.jpg', content_type: 'ima
 amina = Farmer.create!(
   name: "Amina",
   location: "Triolet, MU 21301",
+  region: "north",
   description: "Amina grows chillies, eggplants, and okra using sustainable and water-efficient methods.",
   contact_info: "5988 7654"
 )
@@ -123,6 +133,7 @@ amina.image.attach(io: photo_amina, filename: 'amina.jpg', content_type: 'image/
 nita = Farmer.create!(
   name: "Nita",
   location: "Valetta Road, Moka MU, 80808",
+  region: "centre",
   description: "Nita is a dedicated horticulturist from Moka who specializes in cultivating organic vegetables with care and precision.",
   contact_info: "5768 2041"
 )
@@ -133,6 +144,7 @@ nita.image.attach(io: photo_nita, filename: 'nita.jpg', content_type: 'image/jpe
 jay = Farmer.create!(
   name: "Jay",
   location: "Route Royale, La Laura-Malenga MU, 81402",
+  region: "centre",
   description: "Jay is a second-generation farmer known for his flavorful fruits and traditional farming methods.",
   contact_info: "5802 9173"
 )
