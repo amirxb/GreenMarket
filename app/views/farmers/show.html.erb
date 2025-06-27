@@ -21,7 +21,7 @@
           <% end %>
         </div>
       <h3><%= product.name %></h3>
-      <p>Price: Rs <%= product.price %></p>
+      <p>Price: Rs <%= number_with_precision (product.price), precision: 2 %></p>
       <%= link_to "View Details", farmer_product_path(@farmer, product), class: "product-link" %>
     </div>
     <% end %>
